@@ -20,6 +20,50 @@ public class IndexController {
         modelAndView.setViewName("newslist");
         return modelAndView;
     }
+
+    @RequestMapping("/expert")
+    public ModelAndView toExpert(HttpServletRequest request){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("expertlist");
+        return modelAndView;
+    }
+
+    /**
+     * 编辑查看
+     * @param request
+     * @return
+     */
+    @RequestMapping("/expert1")
+    public ModelAndView toExpert1(HttpServletRequest request){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("expertlist");
+        return modelAndView;
+    }
+
+    /**
+     * @Author: ZHENGSHUAI
+     * @Date: 16:04 2019/12/31
+     * @Description:新建
+     */
+    @RequestMapping("/create")
+    public ModelAndView toCreate(HttpServletRequest request){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("create");
+        return modelAndView;
+    }
+
+    /**
+     * @Author: ZHENGSHUAI
+     * @Date: 16:04 2019/12/31
+     * @Description:编辑
+     */
+    @RequestMapping("/edit")
+    public ModelAndView toEdit(HttpServletRequest request){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("edit");
+        return modelAndView;
+    }
+
     @RequestMapping("/analyse")
     public ModelAndView toAnalyse(HttpServletRequest request){
         ModelAndView modelAndView = new ModelAndView();
