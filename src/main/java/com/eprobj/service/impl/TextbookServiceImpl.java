@@ -68,4 +68,9 @@ public class TextbookServiceImpl implements TextbookService {
     public int updateByDocId(Textbook textbook) {
         return textbookMapper.updateById(textbook);
     }
+
+    @Override
+    public List<Map<String, Object>> statByType(String type) {
+        return textbookMapper.statByType(type);
+    }
 }

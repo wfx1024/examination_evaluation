@@ -643,4 +643,25 @@
             </if>
         </trim>
     </insert>
+
+    <select id="statByType" resultType="java.util.Map">
+        <if test="type == 1">
+            SELECT
+            count(*) AS value,
+            LANGUAGE AS name
+            FROM
+            textbook
+            GROUP BY
+            `language`;
+        </if>
+        <if test="type == 2">
+            SELECT
+            count(*) AS value,
+            textbook_type4 AS name
+            FROM
+            textbook
+            GROUP BY
+            `textbook_type4`;
+        </if>
+    </select>
 </mapper>

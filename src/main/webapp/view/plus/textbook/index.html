@@ -58,6 +58,7 @@
             <div>
                 <button class="layui-btn layuiadmin-btn-list" data-type="batchdel">删除</button>
                 <button class="layui-btn layuiadmin-btn-list" data-type="add">新增</button>
+                <button class="layui-btn layuiadmin-btn-list" data-type="stat">统计报表</button>
             </div>
             <table id="tbl-book-list" lay-filter="tbl-book-list"></table>
             <script type="text/html" id="toolbar-user-list">
@@ -181,6 +182,16 @@ layui.config({
                     var submit = layero.find('iframe').contents().find("#btn-save");
                     submit.trigger('click');
                 }
+            })
+            layer.full(frame);
+        },
+        stat:function () {
+            var frame = layer.open({
+                type: 2
+                ,title: '统计报表'
+                ,content:   '/kspj/textbook/toStat'
+                ,maxmin: true
+                ,area: ['100%', '100%']
             })
             layer.full(frame);
         }
