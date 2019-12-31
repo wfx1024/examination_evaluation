@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eprobj.dao.ExpertMapper">
+    <select id="expertsList" resultType="com.eprobj.entity.Expert" parameterType="com.eprobj.entity.Expert">
+        SELECT IR_EID,IR_ENAME,IR_ESUBJECT,IR_EWORKUNIT,IR_EDUTY,IR_EPROVINCE,IR_EPHONE,IR_ETERRITORY,IR_EUNITCATEGORY,IR_ECREATTIME FROM  urlexpert
+        WHERE
+        1 = 1
+        <if test="IR_EID!=null and IR_EID!=''">
+            and IR_EID  = #{IR_EID,jdbcType=INTEGER}
+        </if>
+        <if test="IR_ENAME!=null and IR_ENAME!=''">
+            and IR_ENAME like concat('%',#{IR_ENAME,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="IR_ESUBJECT!=null and IR_ESUBJECT!=''">
+            and IR_ESUBJECT  = #{IR_ESUBJECT,jdbcType=VARCHAR}
+        </if>
+        <if test="IR_EWORKUNIT!=null and IR_EWORKUNIT!=''">
+            and IR_EWORKUNIT like concat('%',#{IR_EWORKUNIT,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="IR_EDUTY!=null and IR_EDUTY!=''">
+            and IR_EDUTY = #{IR_EDUTY,jdbcType=VARCHAR}
+        </if>
+        <if test="IR_EPROVINCE!=null and IR_EPROVINCE!=''">
+            and IR_EPROVINCE = #{IR_EPROVINCE,jdbcType=VARCHAR}
+        </if>
+        <if test="IR_EPHONE!=null and IR_EPHONE!=''">
+            and IR_EPHONE = #{IR_EPHONE,jdbcType=VARCHAR}
+        </if>
+        <if test="IR_ETERRITORY!=null and IR_ETERRITORY!=''">
+            and IR_ETERRITORY = #{IR_ETERRITORY,jdbcType=VARCHAR}
+        </if>
+        <if test="IR_EUNITCATEGORY!=null and IR_EUNITCATEGORY!=''">
+            and IR_EUNITCATEGORY = #{IR_EUNITCATEGORY,jdbcType=VARCHAR}
+        </if>
+        <if test="IR_ECREATTIME!=null and IR_ECREATTIME!=''">
+            and IR_ECREATTIME = #{IR_ECREATTIME,jdbcType=VARCHAR}
+        </if>
+        order by IR_EID
+        limit #{page,jdbcType=INTEGER},#{limit,jdbcType=INTEGER}
+    </select>
+
+    <select id="expertCount" resultType="int" parameterType="com.eprobj.entity.Expert">
+        SELECT count(*) FROM  urlexpert
+        WHERE
+        1 = 1
+        <if test="IR_EID!=null and IR_EID!=''">
+            and IR_EID  = #{IR_EID,jdbcType=INTEGER}
+        </if>
+        <if test="IR_ENAME!=null and IR_ENAME!=''">
+            and IR_ENAME like concat('%',#{IR_ENAME,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="IR_ESUBJECT!=null and IR_ESUBJECT!=''">
+            and IR_ESUBJECT  = #{IR_ESUBJECT,jdbcType=VARCHAR}
+        </if>
+        <if test="IR_EWORKUNIT!=null and IR_EWORKUNIT!=''">
+            and IR_EWORKUNIT like concat('%',#{IR_EWORKUNIT,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="IR_EDUTY!=null and IR_EDUTY!=''">
+            and IR_EDUTY = #{IR_EDUTY,jdbcType=VARCHAR}
+        </if>
+        <if test="IR_EPROVINCE!=null and IR_EPROVINCE!=''">
+            and IR_EPROVINCE = #{IR_EPROVINCE,jdbcType=VARCHAR}
+        </if>
+        <if test="IR_EPHONE!=null and IR_EPHONE!=''">
+            and IR_EPHONE = #{IR_EPHONE,jdbcType=VARCHAR}
+        </if>
+        <if test="IR_ETERRITORY!=null and IR_ETERRITORY!=''">
+            and IR_ETERRITORY = #{IR_ETERRITORY,jdbcType=VARCHAR}
+        </if>
+        <if test="IR_EUNITCATEGORY!=null and IR_EUNITCATEGORY!=''">
+            and IR_EUNITCATEGORY = #{IR_EUNITCATEGORY,jdbcType=VARCHAR}
+        </if>
+        <if test="IR_ECREATTIME!=null and IR_ECREATTIME!=''">
+            and IR_ECREATTIME = #{IR_ECREATTIME,jdbcType=VARCHAR}
+        </if>
+    </select>
+
+    <delete id="deleteExpert" parameterType="java.util.List">
+        delete from
+        urlexpert
+        where
+        IR_EID in
+        <foreach collection="expertIDs" item="item" index="index" separator="," open="(" close=")">
+            #{item}
+        </foreach>
+    </delete>
+
+
+    <select id="areaList" resultType="String" >
+        select IR_EPROVINCE from urlexpert GROUP BY IR_EPROVINCE;
+    </select>
+
+
+<!--    搜索时间的-->
+<!--    <select id="expertsGYears" resultType="String" >-->
+<!--      select year(IR_URLTIME) years from urlcontent GROUP BY years ORDER BY years DESC-->
+<!--    </select>-->
+
+<!--    <select id="newsAnalyse" resultType="map" >-->
+<!--      select IR_GROUPNAME,count(*) num,year(IR_URLTIME) years from urlcontent WHERE year(IR_URLTIME)= #{param.year} GROUP BY IR_GROUPNAME,years ORDER BY num DESC-->
+<!--    </select>-->
+
+</mapper>
