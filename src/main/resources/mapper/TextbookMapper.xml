@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eprobj.dao.TextbookMapper">
+    <select id="page" resultType="com.eprobj.entity.Textbook" parameterType="java.util.Map">
+        SELECT
+            id,
+            name,
+            isbn,
+            publisher,
+            edition,
+            edition_date AS editionDate,
+            language,
+            textbook_type1 AS textbookType1,
+            publish_form AS publishForm,
+            is_college AS isCollege,
+            author1,
+            author_mode1 AS authorMode1,
+            author_nationality1 AS authorNationality1,
+            author_unit1 AS authorUnit1,
+            project_situation AS projectSituation,
+            other_situation AS otherSituation,
+            prize_situation AS prizeSituation,
+            other_prize_situation AS otherPrizeSituation,
+            status,
+            create_user AS createUser,
+            update_user AS updateUser
+        FROM
+            textbook
+        where
+            1 = 1
+            <if test="name != null and name != ''">
+                and  name like concat('%',concat(#{name},'%'))
+            </if>
+            <if test="language != null and language != ''">
+                and  language = #{language}
+            </if>
+            <if test="isbn != null and isbn != ''">
+                and  isbn like concat('%',concat(#{isbn},'%'))
+            </if>
+            <if test="textbookType != null and textbookType != ''">
+                and  textbook_type1 like concat('%',concat(#{textbookType},'%'))
+            </if>
+            <if test="author != null and author != ''">
+                and  author like concat('%',concat(#{author},'%'))
+            </if>
+        limit #{index},#{limit}
+    </select>
+
+    <select id="count" resultType="java.lang.Long" parameterType="java.util.Map">
+        SELECT
+          count(*)
+        FROM
+        textbook
+        where
+        1 = 1
+        <if test="name != null and name != ''">
+            and  name like concat('%',concat(#{name},'%'))
+        </if>
+        <if test="language != null and language != ''">
+            and  language = #{language}
+        </if>
+        <if test="isbn != null and isbn != ''">
+            and  isbn like concat('%',concat(#{isbn},'%'))
+        </if>
+        <if test="textbookType != null and textbookType != ''">
+            and  textbook_type1 like concat('%',concat(#{textbookType},'%'))
+        </if>
+        <if test="author != null and author != ''">
+            and  author like concat('%',concat(#{author},'%'))
+        </if>
+    </select>
+
+
+
+
+    <select id="findAllType" resultType="java.lang.String">
+        SELECT DISTINCT
+            textbook_type1
+        FROM
+            textbook
+        GROUP BY
+            textbook_type1
+        UNION ALL
+        SELECT DISTINCT
+            textbook_type2
+        FROM
+            textbook
+        GROUP BY
+            textbook_type2
+        UNION ALL
+        SELECT DISTINCT
+            textbook_type3
+        FROM
+            textbook
+        GROUP BY
+            textbook_type3
+        UNION ALL
+        SELECT DISTINCT
+            textbook_type4
+        FROM
+            textbook
+        GROUP BY
+            textbook_type4
+        UNION ALL
+        SELECT DISTINCT
+            textbook_type5
+        FROM
+            textbook
+        GROUP BY
+            textbook_type5
+    </select>
+
+    <select id="findAllLanguage" resultType="java.lang.String">
+        select language from  textbook group by language
+    </select>
+
+    <delete id="deleteByIds" parameterType="java.util.List">
+        delete from
+        textbook
+        where
+        id in
+        <foreach collection="ids" item="item" index="index" separator="," open="(" close=")">
+            #{item}
+        </foreach>
+    </delete>
+
+    <select id="getById" resultType="com.eprobj.entity.Textbook">
+        SELECT
+            id,
+            name,
+            publisher,
+            isbn,
+            edition_date AS editionDate,
+            edition,
+            edition_back AS editionBack,
+            name_back AS nameBack,
+            isbn_back AS isbnBack,
+            language,
+            textbook_type1 AS textbookType1,
+            textbook_type2 AS textbookType2,
+            textbook_type3 AS textbookType3,
+            textbook_type4 AS textbookType4,
+            textbook_type5 AS textbookType5,
+            publish_form AS publishForm,
+            is_college AS isCollege,
+            author1,
+            author_mode1 AS authorModel,
+            author_unit1 AS authorUnit1,
+            author_nationality1 AS authorNationality1,
+            author2,
+            author_mode2 AS authorMode2,
+            author_unit2 AS authorUnit2,
+            author_nationality2 AS authorNationality2,
+            author3,
+            author_mode3 AS authorMode3,
+            author_unit3 AS authorUnit3,
+            author_nationality3 AS authorNationality3,
+            author4,
+            author_mode4 AS authorMode4,
+            author_unit4 AS authorUnit4,
+            author_nationality4 AS authorNationality4,
+            author5,
+            author_mode5 AS authorMode5,
+            author_unit5 AS authorUnit5,
+            author_nationality5 AS authorNationality5,
+            author6,
+            author_mode6 AS authorMode6,
+            author_unit6 AS authorUnit6,
+            author_nationality6 AS authorNationality6,
+            project_situation AS projectSituation,
+            other_situation AS otherSituation,
+            prize_situation AS prizeSituation,
+            other_prize_situation AS otherPrizeSituation,
+            copyright_image AS copyrightImage,
+            cover_image AS coverImage,
+            status,
+            create_user AS createUser,
+            update_user AS updateUser
+        FROM
+            textbook
+        where id = #{id}
+
+    </select>
+
+    <update id="updateById" parameterType="com.eprobj.entity.Textbook">
+        update textbook
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="publisher != null">
+                publisher = #{publisher,jdbcType=VARCHAR},
+            </if>
+            <if test="isbn != null">
+                isbn = #{isbn,jdbcType=VARCHAR},
+            </if>
+            <if test="editionDate != null">
+                edition_date = #{editionDate,jdbcType=VARCHAR},
+            </if>
+            <if test="edition != null">
+                edition = #{edition,jdbcType=VARCHAR},
+            </if>
+            <if test="editionBack != null">
+                edition_back = #{editionBack,jdbcType=VARCHAR},
+            </if>
+            <if test="nameBack != null">
+                name_back = #{nameBack,jdbcType=VARCHAR},
+            </if>
+            <if test="isbnBack != null">
+                isbn_back = #{isbnBack,jdbcType=VARCHAR},
+            </if>
+            <if test="language != null">
+                language = #{language,jdbcType=VARCHAR},
+            </if>
+            <if test="textbookType1 != null">
+                textbook_type1 = #{textbookType1,jdbcType=VARCHAR},
+            </if>
+            <if test="textbookType2 != null">
+                textbook_type2 = #{textbookType2,jdbcType=VARCHAR},
+            </if>
+            <if test="textbookType3 != null">
+                textbook_type3 = #{textbookType3,jdbcType=VARCHAR},
+            </if>
+            <if test="textbookType4 != null">
+                textbook_type4 = #{textbookType4,jdbcType=VARCHAR},
+            </if>
+            <if test="textbookType5 != null">
+                textbook_type5 = #{textbookType5,jdbcType=VARCHAR},
+            </if>
+            <if test="publishForm != null">
+                publish_form = #{publishForm,jdbcType=VARCHAR},
+            </if>
+            <if test="isCollege != null">
+                is_college = #{isCollege,jdbcType=VARCHAR},
+            </if>
+            <if test="author1 != null">
+                author1 = #{author1,jdbcType=VARCHAR},
+            </if>
+            <if test="authorMode1 != null">
+                author_mode1 = #{authorMode1,jdbcType=VARCHAR},
+            </if>
+            <if test="authorUnit1 != null">
+                author_unit1 = #{authorUnit1,jdbcType=VARCHAR},
+            </if>
+            <if test="authorNationality1 != null">
+                author_nationality1 = #{authorNationality1,jdbcType=VARCHAR},
+            </if>
+            <if test="author2 != null">
+                author2 = #{author2,jdbcType=VARCHAR},
+            </if>
+            <if test="authorMode2 != null">
+                author_mode2 = #{authorMode2,jdbcType=VARCHAR},
+            </if>
+            <if test="authorUnit2 != null">
+                author_unit2 = #{authorUnit2,jdbcType=VARCHAR},
+            </if>
+            <if test="authorNationality2 != null">
+                author_nationality2 = #{authorNationality2,jdbcType=VARCHAR},
+            </if>
+            <if test="author3 != null">
+                author3 = #{author3,jdbcType=VARCHAR},
+            </if>
+            <if test="authorMode3 != null">
+                author_mode3 = #{authorMode3,jdbcType=VARCHAR},
+            </if>
+            <if test="authorUnit3 != null">
+                author_unit3 = #{authorUnit3,jdbcType=VARCHAR},
+            </if>
+            <if test="authorNationality3 != null">
+                author_nationality3 = #{authorNationality3,jdbcType=VARCHAR},
+            </if>
+            <if test="author4 != null">
+                author4 = #{author4,jdbcType=VARCHAR},
+            </if>
+            <if test="authorMode4 != null">
+                author_mode4 = #{authorMode4,jdbcType=VARCHAR},
+            </if>
+            <if test="authorUnit4 != null">
+                author_unit4 = #{authorUnit4,jdbcType=VARCHAR},
+            </if>
+            <if test="authorNationality4 != null">
+                author_nationality4 = #{authorNationality4,jdbcType=VARCHAR},
+            </if>
+            <if test="author5 != null">
+                author5 = #{author5,jdbcType=VARCHAR},
+            </if>
+            <if test="authorMode5 != null">
+                author_mode5 = #{authorMode5,jdbcType=VARCHAR},
+            </if>
+            <if test="authorUnit5 != null">
+                author_unit5 = #{authorUnit5,jdbcType=VARCHAR},
+            </if>
+            <if test="authorNationality5 != null">
+                author_nationality5 = #{authorNationality5,jdbcType=VARCHAR},
+            </if>
+            <if test="author6 != null">
+                author6 = #{author6,jdbcType=VARCHAR},
+            </if>
+            <if test="authorMode6 != null">
+                author_mode6 = #{authorMode6,jdbcType=VARCHAR},
+            </if>
+            <if test="authorUnit6 != null">
+                author_unit6 = #{authorUnit6,jdbcType=VARCHAR},
+            </if>
+            <if test="authorNationality6 != null">
+                author_nationality6 = #{authorNationality6,jdbcType=VARCHAR},
+            </if>
+            <if test="projectSituation != null">
+                project_situation = #{projectSituation,jdbcType=VARCHAR},
+            </if>
+            <if test="otherSituation != null">
+                other_situation = #{otherSituation,jdbcType=VARCHAR},
+            </if>
+            <if test="prizeSituation != null">
+                prize_situation = #{prizeSituation,jdbcType=VARCHAR},
+            </if>
+            <if test="otherPrizeSituation != null">
+                other_prize_situation = #{otherPrizeSituation,jdbcType=VARCHAR},
+            </if>
+            <if test="copyrightImage != null">
+                copyright_image = #{copyrightImage,jdbcType=VARCHAR},
+            </if>
+            <if test="coverImage != null">
+                cover_image = #{coverImage,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="createUser != null">
+                create_user = #{createUser,jdbcType=VARCHAR},
+            </if>
+            <if test="updateUser != null">
+                update_user = #{updateUser,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <insert id="save" parameterType="com.eprobj.entity.Textbook">
+        insert into textbook
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="publisher != null">
+                publisher,
+            </if>
+            <if test="isbn != null">
+                isbn,
+            </if>
+            <if test="editionDate != null">
+                edition_date,
+            </if>
+            <if test="edition != null">
+                edition,
+            </if>
+            <if test="editionBack != null">
+                edition_back,
+            </if>
+            <if test="nameBack != null">
+                name_back,
+            </if>
+            <if test="isbnBack != null">
+                isbn_back,
+            </if>
+            <if test="language != null">
+                language,
+            </if>
+            <if test="textbookType1 != null">
+                textbook_type1,
+            </if>
+            <if test="textbookType2 != null">
+                textbook_type2,
+            </if>
+            <if test="textbookType3 != null">
+                textbook_type3,
+            </if>
+            <if test="textbookType4 != null">
+                textbook_type4,
+            </if>
+            <if test="textbookType5 != null">
+                textbook_type5,
+            </if>
+            <if test="publishForm != null">
+                publish_form,
+            </if>
+            <if test="isCollege != null">
+                is_college,
+            </if>
+            <if test="author1 != null">
+                author1,
+            </if>
+            <if test="authorMode1 != null">
+                author_mode1,
+            </if>
+            <if test="authorUnit1 != null">
+                author_unit1,
+            </if>
+            <if test="authorNationality1 != null">
+                author_nationality1,
+            </if>
+            <if test="author2 != null">
+                author2,
+            </if>
+            <if test="authorMode2 != null">
+                author_mode2,
+            </if>
+            <if test="authorUnit2 != null">
+                author_unit2,
+            </if>
+            <if test="authorNationality2 != null">
+                author_nationality2,
+            </if>
+            <if test="author3 != null">
+                author3,
+            </if>
+            <if test="authorMode3 != null">
+                author_mode3,
+            </if>
+            <if test="authorUnit3 != null">
+                author_unit3,
+            </if>
+            <if test="authorNationality3 != null">
+                author_nationality3,
+            </if>
+            <if test="author4 != null">
+                author4,
+            </if>
+            <if test="authorMode4 != null">
+                author_mode4,
+            </if>
+            <if test="authorUnit4 != null">
+                author_unit4,
+            </if>
+            <if test="authorNationality4 != null">
+                author_nationality4,
+            </if>
+            <if test="author5 != null">
+                author5,
+            </if>
+            <if test="authorMode5 != null">
+                author_mode5,
+            </if>
+            <if test="authorUnit5 != null">
+                author_unit5,
+            </if>
+            <if test="authorNationality5 != null">
+                author_nationality5,
+            </if>
+            <if test="author6 != null">
+                author6,
+            </if>
+            <if test="authorMode6 != null">
+                author_mode6,
+            </if>
+            <if test="authorUnit6 != null">
+                author_unit6,
+            </if>
+            <if test="authorNationality6 != null">
+                author_nationality6,
+            </if>
+            <if test="projectSituation != null">
+                project_situation,
+            </if>
+            <if test="otherSituation != null">
+                other_situation,
+            </if>
+            <if test="prizeSituation != null">
+                prize_situation,
+            </if>
+            <if test="otherPrizeSituation != null">
+                other_prize_situation,
+            </if>
+            <if test="copyrightImage != null">
+                copyright_image,
+            </if>
+            <if test="coverImage != null">
+                cover_image,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="createUser != null">
+                create_user,
+            </if>
+            <if test="updateUser != null">
+                update_user,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="publisher != null">
+                #{publisher,jdbcType=VARCHAR},
+            </if>
+            <if test="isbn != null">
+                #{isbn,jdbcType=VARCHAR},
+            </if>
+            <if test="editionDate != null">
+                #{editionDate,jdbcType=VARCHAR},
+            </if>
+            <if test="edition != null">
+                #{edition,jdbcType=VARCHAR},
+            </if>
+            <if test="editionBack != null">
+                #{editionBack,jdbcType=VARCHAR},
+            </if>
+            <if test="nameBack != null">
+                #{nameBack,jdbcType=VARCHAR},
+            </if>
+            <if test="isbnBack != null">
+                #{isbnBack,jdbcType=VARCHAR},
+            </if>
+            <if test="language != null">
+                #{language,jdbcType=VARCHAR},
+            </if>
+            <if test="textbookType1 != null">
+                #{textbookType1,jdbcType=VARCHAR},
+            </if>
+            <if test="textbookType2 != null">
+                #{textbookType2,jdbcType=VARCHAR},
+            </if>
+            <if test="textbookType3 != null">
+                #{textbookType3,jdbcType=VARCHAR},
+            </if>
+            <if test="textbookType4 != null">
+                #{textbookType4,jdbcType=VARCHAR},
+            </if>
+            <if test="textbookType5 != null">
+                #{textbookType5,jdbcType=VARCHAR},
+            </if>
+            <if test="publishForm != null">
+                #{publishForm,jdbcType=VARCHAR},
+            </if>
+            <if test="isCollege != null">
+                #{isCollege,jdbcType=VARCHAR},
+            </if>
+            <if test="author1 != null">
+                #{author1,jdbcType=VARCHAR},
+            </if>
+            <if test="authorMode1 != null">
+                #{authorMode1,jdbcType=VARCHAR},
+            </if>
+            <if test="authorUnit1 != null">
+                #{authorUnit1,jdbcType=VARCHAR},
+            </if>
+            <if test="authorNationality1 != null">
+                #{authorNationality1,jdbcType=VARCHAR},
+            </if>
+            <if test="author2 != null">
+                #{author2,jdbcType=VARCHAR},
+            </if>
+            <if test="authorMode2 != null">
+                #{authorMode2,jdbcType=VARCHAR},
+            </if>
+            <if test="authorUnit2 != null">
+                #{authorUnit2,jdbcType=VARCHAR},
+            </if>
+            <if test="authorNationality2 != null">
+                #{authorNationality2,jdbcType=VARCHAR},
+            </if>
+            <if test="author3 != null">
+                #{author3,jdbcType=VARCHAR},
+            </if>
+            <if test="authorMode3 != null">
+                #{authorMode3,jdbcType=VARCHAR},
+            </if>
+            <if test="authorUnit3 != null">
+                #{authorUnit3,jdbcType=VARCHAR},
+            </if>
+            <if test="authorNationality3 != null">
+                #{authorNationality3,jdbcType=VARCHAR},
+            </if>
+            <if test="author4 != null">
+                #{author4,jdbcType=VARCHAR},
+            </if>
+            <if test="authorMode4 != null">
+                #{authorMode4,jdbcType=VARCHAR},
+            </if>
+            <if test="authorUnit4 != null">
+                #{authorUnit4,jdbcType=VARCHAR},
+            </if>
+            <if test="authorNationality4 != null">
+                #{authorNationality4,jdbcType=VARCHAR},
+            </if>
+            <if test="author5 != null">
+                #{author5,jdbcType=VARCHAR},
+            </if>
+            <if test="authorMode5 != null">
+                #{authorMode5,jdbcType=VARCHAR},
+            </if>
+            <if test="authorUnit5 != null">
+                #{authorUnit5,jdbcType=VARCHAR},
+            </if>
+            <if test="authorNationality5 != null">
+                #{authorNationality5,jdbcType=VARCHAR},
+            </if>
+            <if test="author6 != null">
+                #{author6,jdbcType=VARCHAR},
+            </if>
+            <if test="authorMode6 != null">
+                #{authorMode6,jdbcType=VARCHAR},
+            </if>
+            <if test="authorUnit6 != null">
+                #{authorUnit6,jdbcType=VARCHAR},
+            </if>
+            <if test="authorNationality6 != null">
+                #{authorNationality6,jdbcType=VARCHAR},
+            </if>
+            <if test="projectSituation != null">
+                #{projectSituation,jdbcType=VARCHAR},
+            </if>
+            <if test="otherSituation != null">
+                #{otherSituation,jdbcType=VARCHAR},
+            </if>
+            <if test="prizeSituation != null">
+                #{prizeSituation,jdbcType=VARCHAR},
+            </if>
+            <if test="otherPrizeSituation != null">
+                #{otherPrizeSituation,jdbcType=VARCHAR},
+            </if>
+            <if test="copyrightImage != null">
+                #{copyrightImage,jdbcType=VARCHAR},
+            </if>
+            <if test="coverImage != null">
+                #{coverImage,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="createUser != null">
+                #{createUser,jdbcType=VARCHAR},
+            </if>
+            <if test="updateUser != null">
+                #{updateUser,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+</mapper>
