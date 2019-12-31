@@ -29,25 +29,25 @@
         <div class="layui-inline">
             <label class="layui-form-label">选用教材名称：</label>
             <div class="layui-input-inline">
-                <input type="text" id="IR_URLTITLE" name="IR_URLTITLE" placeholder="请输入" autocomplete="off" class="layui-input">
+                <input type="text" id="IR_URLTITLE" name="IR_URLTITLE" placeholder="请输入" value="义务教育教科书 数学 五年级上册" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
             <label class="layui-form-label">教材版本/编号：</label>
             <div class="layui-input-inline">
-                <input type="text" id="" name="IR_SITENAME" placeholder="请输入" autocomplete="off" class="layui-input">
+                <input type="text" id="" name="IR_SITENAME" placeholder="请输入" value="第1版/9787303128426" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
             <label class="layui-form-label">教材出版社：</label>
             <div class="layui-input-inline">
-                <input type="text" id="" name="IR_SITENAME" placeholder="请输入" autocomplete="off" class="layui-input">
+                <input type="text" id="" name="IR_SITENAME" placeholder="请输入" value="北京师范大学出版社（集团）有限公司" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
             <label class="layui-form-label">教材主编：</label>
             <div class="layui-input-inline">
-                <input type="text" id="" name="IR_SITENAME" placeholder="请输入" autocomplete="off" class="layui-input">
+                <input type="text" id="" name="IR_SITENAME" placeholder="请输入" value="刘坚,孔企平,张丹" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
@@ -55,7 +55,7 @@
             <div class="layui-input-inline">
                 <select id="" name="IR_GROUPNAME">
                     <option value="">请选择</option>
-                    <option value="小学（1-6）年级">小学（1-6）年级</option>
+                    <option value="小学（1-6）年级" selected>小学（1-6）年级</option>
                     <option value="初中（1-3）年级">初中（1-3）年级</option>
                     <option value="高中（1-3）年级">高中（1-3）年级</option>
                 </select>
@@ -67,7 +67,7 @@
                 <select id="" name="IR_GROUPNAME">
                     <option value="">请选择</option>
                     <option  value="语文">语文</option>
-                    <option  value="数学">数学</option>
+                    <option  value="数学" selected>数学</option>
                     <option  value="英语">英语</option>
                     <option  value="英语">政治</option>
                     <option  value="英语">地理</option>
@@ -78,7 +78,7 @@
         <div class="layui-inline">
             <label class="layui-form-label">使用人数：</label>
             <div class="layui-input-inline">
-                <input type="text" id="IR_SITENAME" name="IR_SITENAME" placeholder="请输入" autocomplete="off" class="layui-input">
+                <input type="text" id="IR_SITENAME" name="IR_SITENAME" placeholder="请输入" value="10000" autocomplete="off" class="layui-input">
             </div>
         </div>
 </div>
@@ -105,6 +105,7 @@
             districtname: "districtId",
             level: 'districtId',// 级别
         });
+        currentPicker.setValue("河南省/信阳市/新县");
 
     });
 </script>

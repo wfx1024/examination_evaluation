@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../../../static/layuiadmin/layui/css/layui.css" media="all">
     <!--<link rel="stylesheet" href="../../static/layuiadmin/style/admin.css" media="all">-->
 </head>
+<style type="text/css">
+</style>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
@@ -26,7 +28,7 @@
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree"  lay-filter="test">
                 <li class="layui-nav-item"><a href="jsxy.html">教材选用管理</a></li>
-                <li class="layui-nav-item"><a href="jssy.html">教材使用管理</a></li>
+                <li class="layui-nav-item layui-this"><a href="jssy.html">教材使用管理</a></li>
             </ul>
         </div>
     </div>
@@ -38,34 +40,35 @@
                 <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="form-search">
                     <div class="layui-form-item">
                         <div class="layui-inline">
-                            <label class="layui-form-label">标题</label>
+                            <label class="layui-form-label">学校名称</label>
                             <div class="layui-input-inline">
-                                <input type="text" id="IR_URLTITLE" name="IR_URLTITLE" placeholder="请输入" autocomplete="off" class="layui-input">
+                                <input type="text" id="IR_EXTNAME" name="IR_EXTNAME" placeholder="请输入" autocomplete="off" class="layui-input">
                             </div>
                         </div>
                         <div class="layui-inline">
-                            <label class="layui-form-label">来源</label>
+                            <label class="layui-form-label">教材名称</label>
                             <div class="layui-input-inline">
-                                <input type="text" id="IR_SITENAME" name="IR_SITENAME" placeholder="请输入" autocomplete="off" class="layui-input">
+                                <input type="text" id="iR_URLTITLE" name="iR_URLTITLE" placeholder="请输入" autocomplete="off" class="layui-input">
                             </div>
                         </div>
                         <div class="layui-inline">
-                            <label class="layui-form-label">省份</label>
+                            <label class="layui-form-label">教材出版社</label>
                             <div class="layui-input-inline">
-                                <select id="IR_GROUPNAME" name="IR_GROUPNAME">
+                                    <input type="text" id="iR_SITENAME" name="iR_SITENAME" placeholder="请输入" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">学科</label>
+                            <div class="layui-input-inline">
+                                <select id="iR_URLTIME" name="iR_URLTIME">
                                     <option value="">请选择</option>
+                                    <option  value="语文">语文</option>
+                                    <option  value="数学">数学</option>
+                                    <option  value="英语">英语</option>
+                                    <option  value="英语">政治</option>
+                                    <option  value="英语">地理</option>
+                                    <option  value="英语">历史</option>
                                 </select>
-                            </div>
-                        </div>
-
-                        <div class="layui-inline">
-                            <label class="layui-form-label">发布时间</label>
-                            <div class="layui-input-inline">
-                                <input type="text" id="beginCreateTime" name="beginCreateTime" placeholder="开始时间" autocomplete="off" class="layui-input" readonly>
-                            </div>
-                            <div class="layui-form-mid layui-word-aux">-</div>
-                            <div class="layui-input-inline">
-                                <input type="text" id="endCreateTime" name="endCreateTime" placeholder="结束时间" autocomplete="off" class="layui-input" readonly>
                             </div>
                         </div>
                         <div class="layui-inline">
@@ -83,7 +86,7 @@
                     </div>
                     <table id="tbl-news-list" lay-filter="tbl-news-list"></table>
                     <script type="text/html" id="toolbar-news-list">
-                        <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>编辑</a>
+                        <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>查看</a>
                         <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>
                     </script>
                 </div>
@@ -107,38 +110,28 @@
         var pathSuffer="/kspj";
 
         //查询参数
+        var IR_EXTNAME = $.trim($("#IR_EXTNAME").val());
         var IR_URLTITLE = $.trim($("#IR_URLTITLE").val());
         var IR_SITENAME = $.trim($("#IR_SITENAME").val());
-        var IR_GROUPNAME = $.trim($("#IR_GROUPNAME").val());
-        var beginCreateTime = $.trim($("#beginCreateTime").val());
-        var endCreateTime = $.trim($("#endCreateTime").val());
+        var IR_URLTIME = $.trim($("#IR_URLTIME").val());
         var queryParams = {
+            "IR_EXTNAME" : IR_EXTNAME,
             "IR_URLTITLE" : IR_URLTITLE,
             "IR_SITENAME" : IR_SITENAME,
-            "IR_GROUPNAME" : IR_GROUPNAME,
-            "beginCreateTime" : beginCreateTime,
-            "endCreateTime" : endCreateTime
+            "IR_URLTIME" : IR_URLTIME
         };
-        //日历控件
-        laydate.render({
-            elem: '#beginCreateTime'
-            ,type: 'date'
-        });
-        laydate.render({
-            elem: '#endCreateTime'
-            ,type: 'date'
-        });
         //用户列表
         table.render({
             elem: '#tbl-news-list'
-            ,url: pathSuffer+'/news/list'
+            ,url: pathSuffer+'/jssy/list'
             ,where: queryParams
             ,cols: [[
                 {type: 'checkbox', fixed: 'left'}
-                ,{field: 'iR_URLTITLE', width: 400, title: '标题'}
-                ,{field: 'iR_SITENAME', width: 200, title: '来源', minWidth: 100}
-                ,{field: 'iR_URLTIME', width: 200, title: '发布时间',sort: true}
-                ,{field: 'iR_GROUPNAME', width: 150, title: '地域'}
+                ,{field: 'iR_EXTNAME', width: 400, title: '学校名称'}
+                ,{field: 'iR_URLTITLE', width: 400, title: '教材名称'}
+                ,{field: 'iR_SITENAME', width: 200, title: '教材出版社', minWidth: 100}
+                ,{field: 'iR_URLTIME', width: 200, title: '学科'}
+                ,{field: 'iR_GROUPNAME', width: 150, title: '使用人数',sort: true}
                 ,{title: '操作', minWidth: 40, align: 'center', fixed: 'right', toolbar: '#toolbar-news-list'}
             ]]
             ,page: true
@@ -152,25 +145,25 @@
         table.on('tool(tbl-news-list)', function(obj){
             var data = obj.data;
             if(obj.event === 'del'){
-                layer.confirm('确定删除此动态【'+data.iR_URLTITLE+'】？', function(index){
+                layer.confirm('确定删除此【'+data.iR_URLTITLE+'】？', function(index){
                     var iR_HKEYs = [];
                     iR_HKEYs.push(data.iR_HKEY);
                     $.ajax({
                         type: "POST",
                         timeout: 5000,
                         dataType: "json",
-                        url: pathSuffer+"/news/delete",
+                        url: pathSuffer+"/jssy/delete",
                         data: {"newsIds":iR_HKEYs},
                         success: function(d){
                             if(d.code=="0"){
-                                layer.msg('动态信息删除成功！', {icon: 1});
+                                layer.msg('信息删除成功！', {icon: 1});
                                 table.reload('tbl-news-list');
                             }else{
-                                layer.msg('动态信息删除失败：'+d.msg, {icon: 2});
+                                layer.msg('信息删除失败：'+d.msg, {icon: 2});
                             }
                         },
                         error: function(XMLHttpRequest,textStatus,errorThrown){
-                            layer.msg('动态信息删除失败：'+textStatus, {icon: 2});
+                            layer.msg('信息删除失败：'+textStatus, {icon: 2});
                         },
                         complete: function(){
                             layer.close(index);
@@ -181,11 +174,10 @@
                 var frame = layer.open({
                     type: 2
                     ,title: '查看'
-                    ,content:  pathSuffer+'/article/articleDetail'
+                    ,content:  pathSuffer+'/view/plus/jsxy/jssydata.html'
                     ,maxmin: true
-                    ,area: ['500px', '350px']
+                    ,area: ['596px', '765px']
                 });
-                layer.full(frame);
             }
         });
         // 按钮自动隐藏，监听事件失效处理
@@ -235,7 +227,7 @@
                         type: "POST",
                         timeout: 5000,
                         dataType: "json",
-                        url: pathSuffer+"/news/delete",
+                        url: pathSuffer+"/jsxy/delete",
                         data: {"newsIds":iR_HKEYs},
                         success: function(d){
                             if(d.code=="0"){
@@ -260,7 +252,11 @@
                     ,title: '教材使用信息填报'
                     ,content:  pathSuffer+'/view/plus/jsxy/jssytb.html'
                     ,maxmin: true
-                    ,area: ['500px', '650px']
+                    ,area: ['596px', '599px']
+                    ,btn: ['确定', '取消']
+                    ,yes: function(index, layero){
+                        layer.msg("保存成功");
+                    }
                 });
                // layer.full(frame);
             }
@@ -270,39 +266,6 @@
             var type = $(this).data('type');
             active[type] ? active[type].call(this) : '';
         });
-
-        var initPage = function(){
-            //初始化下拉框
-            var params = {};
-            $.ajax({
-                type: "POST",
-                // timeout: 3000,
-                dataType: "json",
-                url: pathSuffer+"/news/areaList",
-                data: params,
-                success: function(d){
-                    if(d.code=="0"){
-                        var select = $("#IR_GROUPNAME");
-                        $.each(d.data, function (i, v) {
-                            select.append("<option value='"+v+"'>"+v+"</option>");
-                        });
-                        form.render("select", "form-search");
-                    }else{
-                        layer.msg('角色信息获取失败！', {icon: 2});
-                    }
-                },
-                error: function(XMLHttpRequest,textStatus,errorThrown){
-                    layer.msg('角色信息获取失败！', {icon: 2});
-                },
-                complete: function(){
-                }
-            });
-        }
-
-        $(function(){
-            initPage();
-        });
-
     });
 </script>
 </body>
