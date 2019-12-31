@@ -11,5 +11,5 @@ public interface DwLxkService {
 
     int  delete (List<String> newsIds);
 
-    int countAll();
+    int countAll(BookOrgLocal bookOrgLocal);
 }

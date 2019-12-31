@@ -17,6 +17,6 @@ public interface DwLxkMapper {
 
     int delete ( @Param("newsIds")List<String> newsIds);
 
-    int countAll();
+    int countAll( BookOrgLocal bookOrgLocal);
 }
 

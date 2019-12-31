@@ -43,8 +43,9 @@ public class DwLxkController {
     @ResponseBody
     @RequestMapping("/indexdatalist")
     public String indexData( BookOrgLocal bookOrgLocal){
+        bookOrgLocal.setPage ( bookOrgLocal.getPage ()-1 );
         List<BookOrgLocal> bookOrgLocals= dwLxkService.searchList ( bookOrgLocal );
-        int searchCount= dwLxkService.countAll ();
+        int searchCount= dwLxkService.countAll (bookOrgLocal);
         return RespUtil.getResp(RespUtil.RESP_CODE_SUCCESS, "查询成功！", bookOrgLocals,searchCount);
     }
     @ResponseBody

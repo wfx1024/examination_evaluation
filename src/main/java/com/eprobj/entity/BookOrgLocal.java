@@ -18,7 +18,7 @@ public class BookOrgLocal {
     private String  Localclassification;
     private String  main;
     private String  workunit;
-    private int page=1;
+    private int page=0;
     private int limit=20;
 
     public int getPage () {

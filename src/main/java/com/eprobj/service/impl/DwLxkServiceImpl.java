@@ -33,8 +33,8 @@ public class DwLxkServiceImpl implements DwLxkService {
     }
 
     @Override
-    public int countAll () {
-        return dwLxkMapper.countAll ();
+    public int countAll (BookOrgLocal bookOrgLocal) {
+        return dwLxkMapper.countAll (bookOrgLocal);
     }
 
 }
