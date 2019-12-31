@@ -50,8 +50,25 @@
         where id = #{region,jdbcType=INTEGER}
     </update>
 
-    <select id="countAll" resultType="int">
-        select COUNT(*) from cbsxx;
+    <select id="countAll" resultType="int" parameterType="com.eprobj.entity.BookOrgLocal">
+        SELECT COUNT(*) FROM  cbsxx
+        WHERE
+        1 = 1
+        <if test="dwmc!=null and dwmc!=''">
+            and dwmc like concat('%',#{dwmc,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="callman!=null and callman!=''">
+            and callman like concat('%',#{callman,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="cel!=null and cel!=''">
+            and cel like concat('%',#{cel,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="email!=null and email!=''">
+            and email like concat('%',#{email,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="region!=null and region!=''">
+            and region like concat('%',#{region,jdbcType=VARCHAR},'%')
+        </if>
     </select>
 
 </mapper>
