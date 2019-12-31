@@ -1,0 +1,2457 @@
+{
+  "p": {
+    "background": "rgb(255,255,255)",
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true
+  },
+  "d": [
+    {
+      "c": "ht.Group",
+      "i": 2378,
+      "p": {
+        "image": "",
+        "position": {
+          "x": 950,
+          "y": 600
+        },
+        "expanded": true
+      },
+      "s": {
+        "2d.movable":false,
+        "group.type": "rect",
+        "label.font": "16px arial, sans-serif",
+        "label.position": 11,
+        "group.background": "",
+        "group.padding": 22
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 2,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "image": "static/images/hightopo/tpt_icon2.png",
+        "position": {
+          "x": 910,
+          "y": 155
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "互联网",
+        "label.color": "rgb(73,99,173)",
+        "label.font": "25px arial, Microsoft YaHei",
+        "label.position": 20
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 30,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "width": 1200,
+        "displayName": "互联网区",
+        "image": "static/images/hightopo/tpt_title1.png",
+        "position": {
+          "x": 950,
+          "y": 370
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "",
+        "label.position": 30
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 31,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "width": 1200,
+        "height": 530,
+        "displayName": "电子政务外网",
+        "image": "static/images/hightopo/tpt_title3.png",
+        "position": {
+          "x": 950,
+          "y": 805
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "电子政务外网",
+        "label.color": "rgb(51,102,153)",
+        "label.position": 31,
+        "label.offset.y": -25,
+        "label.font": "18px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 32,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "部网站Web服务器",
+        "image": "static/images/hightopo/tpt_box1_bg.png",
+        "width": 300,
+        "position": {
+          "x": 580,
+          "y": 370
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "部网站Web服务器",
+        "label.position": 31,
+        "label.color": "rgb(120,148,172)",
+        "label.offset.y": -25,
+        "label.font": "18px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 33,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "width": 300,
+        "displayName": "网站群Web服务器",
+        "image": "static/images/hightopo/tpt_box1_bg.png",
+        "position": {
+          "x": 910,
+          "y": 370
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "网站群Web服务器",
+        "label.color": "rgb(120,148,172)",
+        "label.position": 31,
+        "label.offset.y": -25,
+        "label.font": "18px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 34,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "width": 300,
+        "displayName": "推荐服务",
+        "image": "static/images/hightopo/tpt_box1_bg.png",
+        "position": {
+          "x": 1330,
+          "y": 370
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "推荐服务",
+        "label.position": 31,
+        "label.color": "rgb(120,148,172)",
+        "label.offset.y": -25,
+        "label.font": "18px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 35,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "width": 1100,
+        "height": 400,
+        "displayName": "应用服务",
+        "image": "static/images/hightopo/tpt_title2.png",
+        "position": {
+          "x": 910,
+          "y": 760
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "应用服务",
+        "label.color": "rgb(51,102,153)",
+        "label.position": 31,
+        "label.offset.y": -25,
+        "label.font": "18px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 36,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "width": 330,
+        "height": 150,
+        "displayName": "检索服务应用",
+        "image": "static/images/hightopo/tpt_box2_bg.png",
+        "position": {
+          "x": 1250,
+          "y": 645
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "检索服务应用",
+        "label.color": "rgb(51,102,153)",
+        "label.position": 31,
+        "label.offset.y": -25,
+        "label.font": "18px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 37,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "width": 300,
+        "height": 150,
+        "displayName": "内容管理平台",
+        "image": "static/images/hightopo/tpt_box2_bg.png",
+        "position": {
+          "x": 570,
+          "y": 645
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "内容管理平台",
+        "label.color": "rgb(51,102,153)",
+        "label.position": 31,
+        "label.offset.y": -25,
+        "label.font": "18px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 3,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10261",
+        "image": "static/images/hightopo/tpt_icon3_2.png",
+        "position": {
+          "x": 390,
+          "y": 350
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.39\nwcm\n负载均衡",
+        "label.position": 31,
+        "label.color": "rgb(73,99,173)",
+        "label2":"1",
+        "label2.font":"0px arial, sans-serif"
+
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 4,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10259",
+        "image": "static/images/hightopo/tpt_icon3.png",
+        "position": {
+          "x": 580,
+          "y": 300
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.37\n负载均衡A",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 20
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10260",
+        "image": "static/images/hightopo/tpt_icon3.png",
+        "position": {
+          "x": 910,
+          "y": 300
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.38\n负载均衡B",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 20
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 6,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10262",
+        "image": "static/images/hightopo/tpt_icon7.png",
+        "position": {
+          "x": 1120,
+          "y": 350
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.40\n繁体站点\n负载均衡",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 7,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10255",
+        "image": "static/images/hightopo/tpt_icon4.png",
+        "position": {
+          "x": 470,
+          "y": 407
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.5\nWeb1",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 8,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10256",
+        "image": "static/images/hightopo/tpt_icon4.png",
+        "position": {
+          "x": 540,
+          "y": 407
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.6\nWeb2",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10257",
+        "image": "static/images/hightopo/tpt_icon4.png",
+        "position": {
+          "x": 610,
+          "y": 407
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.7\nWeb3",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 10,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10258",
+        "image": "static/images/hightopo/tpt_icon4.png",
+        "position": {
+          "x": 680,
+          "y": 407
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.8\nWeb4",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10279",
+        "image": "static/images/hightopo/tpt_icon4.png",
+        "position": {
+          "x": 800,
+          "y": 407
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.9\nWeb1",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 12,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10280",
+        "image": "static/images/hightopo/tpt_icon4.png",
+        "position": {
+          "x": 870,
+          "y": 407
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.10\nWeb2",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 13,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10281",
+        "image": "static/images/hightopo/tpt_icon4.png",
+        "position": {
+          "x": 940,
+          "y": 407
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.11\nWeb3",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 14,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10282",
+        "image": "static/images/hightopo/tpt_icon4.png",
+        "position": {
+          "x": 1010,
+          "y": 407
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.12\nWeb4",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 15,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10273",
+        "image": "static/images/hightopo/tpt_icon4_search.png",
+        "position": {
+          "x": 1255,
+          "y": 430
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.27\nSlave",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 16,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10274",
+        "image": "static/images/hightopo/tpt_icon4_search.png",
+        "position": {
+          "x": 1400,
+          "y": 430
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.28\nSlave",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 17,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10275",
+        "image": "static/images/hightopo/tpt_icon1.png",
+        "position": {
+          "x": 1255,
+          "y": 290
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.29\n推荐应用1",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 18,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10272",
+        "image": "static/images/hightopo/tpt_icon13.png",
+        "position": {
+          "x": 1325,
+          "y": 365
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.26\nMaster",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 19,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10269",
+        "image": "static/images/hightopo/tpt_icon4_search.png",
+        "position": {
+          "x": 510,
+          "y": 620
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.17\nwcm1",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 20,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10270",
+        "image": "static/images/hightopo/tpt_icon4_search.png",
+        "position": {
+          "x": 620,
+          "y": 620
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.18\nwcm2",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 21,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10266",
+        "image": "static/images/hightopo/tpt_icon4_yy.png",
+        "position": {
+          "x": 930,
+          "y": 645
+        },
+        "width": 90,
+        "height": 80
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.13",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31,
+        "label2": "Mas视频服务应用",
+        "label2.position": 31,
+        "label2.color": "rgb(51,102,153)",
+        "label2.offset.y": 15,
+        "label2.font": "17px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 22,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10265",
+        "image": "static/images/hightopo/tpt_icon4_search.png",
+        "position": {
+          "x": 1250,
+          "y": 630
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.15",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 23,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10271",
+        "image": "static/images/hightopo/tpt_icon11.png",
+        "position": {
+          "x": 630,
+          "y": 1000
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.23",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31,
+        "label2": "Oracle数据库",
+        "label2.position": 31,
+        "label2.color": "rgb(51,102,153)",
+        "label2.offset.y": 15,
+        "label2.font": "18px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 24,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10276",
+        "image": "static/images/hightopo/tpt_icon1.png",
+        "position": {
+          "x": 1400,
+          "y": 290
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.30\n推荐应用2",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 25,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10264",
+        "image": "static/images/hightopo/tpt_icon12.png",
+        "position": {
+          "x": 1250,
+          "y": 1000
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.19",
+        "label.position": 31,
+        "label2": "TRS Server数据库",
+        "label2.color": "rgb(73,99,173)",
+        "label2.position": 31,
+        "label2.offset.y": 15,
+        "label2.font": "18px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 26,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "404",
+        "image": "static/images/hightopo/tpt_icon1_main.png",
+        "position": {
+          "x": 250,
+          "y": 500
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.54\n存储服务",
+        "label.position": 31,
+        "label.color": "rgb(73,99,173)",
+        "label.font": "18px arial, sans-serif"
+      }
+    },
+
+
+    {
+      "c": "ht.Node",
+      "i": 101,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "width": 300,
+        "height": 150,
+        "displayName": "选件雷达",
+        "image": "static/images/hightopo/tpt_box2_bg.png",
+        "position": {
+          "x": 570,
+          "y": 820
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "",
+        "label.color": "rgb(51,102,153)",
+        "label.position": 31,
+        "label.offset.y": -25,
+        "label.font": "18px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 19,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10269",
+        "image": "static/images/hightopo/tpt_icon4_search.png",
+        "position": {
+          "x": 510,
+          "y": 800
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.21\n外网选件",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 20,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10270",
+        "image": "static/images/hightopo/tpt_icon4_search.png",
+        "position": {
+          "x": 620,
+          "y": 800
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.25\n雷达系统",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+
+    {
+      "c": "ht.Node",
+      "i": 101,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "width": 400,
+        "height": 150,
+        "displayName": "测试监控平台",
+        "image": "static/images/hightopo/tpt_box2_bg.png",
+        "position": {
+          "x": 1020,
+          "y": 820
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "",
+        "label.color": "rgb(51,102,153)",
+        "label.position": 31,
+        "label.offset.y": -25,
+        "label.font": "18px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 19,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10269",
+        "image": "static/images/hightopo/tpt_icon4_search.png",
+        "position": {
+          "x": 920,
+          "y": 800
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.62\n测试平台",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 20,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "10270",
+        "image": "static/images/hightopo/tpt_icon4_search.png",
+        "position": {
+          "x": 1130,
+          "y": 800
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "10.16.0.63\n监控系统",
+        "label.color": "rgb(73,99,173)",
+        "label.position": 31
+      }
+    },
+
+
+    {
+      "c": "ht.Node",
+      "i": 40,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "互联网/负载均衡中间点",
+        "image": "",
+        "width": 1,
+        "height": 1,
+        "position": {
+          "x": 910,
+          "y": 255
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "",
+        "label.position": 31,
+        "label.color": "rgb(30,144,255)",
+        "label.font": "18px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 2
+        },
+        "target": {
+          "__i": 5
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "boundary",
+        "edge.target.offset.x": -1,
+        "edge.source.offset.y": -2,
+        "icons": {
+          "fromArrow": {
+            "position": 15,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "fromArrow"
+            ]
+          },
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 40
+        },
+        "target": {
+          "__i": 6
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 40
+        },
+        "target": {
+          "__i": 4
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 41,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "负载均衡A/部网站中间点",
+        "image": "",
+        "width": 1,
+        "height": 1,
+        "position": {
+          "x": 580,
+          "y": 350
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "",
+        "label.position": 31,
+        "label.color": "rgb(30,144,255)",
+        "label.font": "18px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 41
+        },
+        "target": {
+          "__i": 4
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "boundary",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 41
+        },
+        "target": {
+          "__i": 7
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 41
+        },
+        "target": {
+          "__i": 8
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 41
+        },
+        "target": {
+          "__i": 9
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 41
+        },
+        "target": {
+          "__i": 10
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 42,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "负载均衡B/下属单位Web中间点",
+        "image": "",
+        "width": 1,
+        "height": 1,
+        "position": {
+          "x": 910,
+          "y": 350
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "label": "",
+        "label.position": 31,
+        "label.color": "rgb(30,144,255)",
+        "label.font": "18px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 42
+        },
+        "target": {
+          "__i": 5
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "boundary",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 42
+        },
+        "target": {
+          "__i": 11
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 42
+        },
+        "target": {
+          "__i": 12
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 42
+        },
+        "target": {
+          "__i": 13
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 42
+        },
+        "target": {
+          "__i": 14
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 43,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "部网站/推荐服务中间点1",
+        "width": 1,
+        "height": 1,
+        "position": {
+          "x": 1180,
+          "y": 430
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 44,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "部网站/推荐服务中间点2",
+        "width": 1,
+        "height": 1,
+        "position": {
+          "x": 1120,
+          "y": 520
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 43
+        },
+        "target": {
+          "__i": 44
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "fromArrow": {
+            "position": 15,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "fromArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 45,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "部网站/推荐服务中间点3",
+        "width": 1,
+        "height": 1,
+        "position": {
+          "x": 750,
+          "y": 520
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 46,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "部网站/推荐服务中间点4",
+        "width": 1,
+        "height": 1,
+        "position": {
+          "x": 730,
+          "y": 380
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 44
+        },
+        "target": {
+          "__i": 45
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v"
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 46
+        },
+        "target": {
+          "__i": 45
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "fromArrow": {
+            "position": 15,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "fromArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 37
+        },
+        "target": {
+          "__i": 21
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "ortho",
+        "icons": {
+          "fromArrow": {
+            "position": 15,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "fromArrow"
+            ]
+          },
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 23
+        },
+        "target": {
+          "__i": 25
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "ortho",
+        "icons": {
+          "fromArrow": {
+            "position": 15,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "fromArrow"
+            ]
+          },
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 36
+        },
+        "target": {
+          "__i": 25
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "ortho",
+        "icons": {
+          "fromArrow": {
+            "position": 15,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "fromArrow"
+            ]
+          },
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 30
+        },
+        "target": {
+          "__i": 23
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "extend.west",
+        "icons": {
+          "fromArrow": {
+            "position": 15,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "fromArrow"
+            ]
+          },
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "存储服务/应用服务中间点1",
+        "width": 1,
+        "height": 1,
+        "position": {
+          "x": 360,
+          "y": 560
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "存储服务/应用服务中间点2",
+        "width": 1,
+        "height": 1,
+        "position": {
+          "x": 300,
+          "y": 560
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 48
+        },
+        "target": {
+          "__i": 47
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "ortho",
+        "icons": {
+          "fromArrow": {
+            "position": 15,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "fromArrow"
+            ]
+          },
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 49,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "wcm负载均衡/内容管理平台中间点1",
+        "width": 1,
+        "height": 1,
+        "position": {
+          "x": 390,
+          "y": 425
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "wcm负载均衡/内容管理平台中间点2",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 390,
+          "y": 520
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 51,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "wcm负载均衡/内容管理平台中间点3",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 570,
+          "y": 570
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 49
+        },
+        "target": {
+          "__i": 50
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "ortho",
+        "icons": {
+          "fromArrow": {
+            "position": 15,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "fromArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 50
+        },
+        "target": {
+          "__i": 51
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 52,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "下属单位web/mas中间点1",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 725,
+          "y": 450
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "下属单位web/mas中间点2",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 735,
+          "y": 620
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 54,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "下属单位web//mas中间点3",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 890,
+          "y": 620
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 52
+        },
+        "target": {
+          "__i": 53
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "fromArrow": {
+            "position": 15,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "fromArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 53
+        },
+        "target": {
+          "__i": 54
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 55,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "部网站Web/检索服务中间点1",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 1060,
+          "y": 430
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 56,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "部网站Web/检索服务中间点2",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 1085,
+          "y": 600
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 57,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "部网站Web/检索服务中间点3",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 1075,
+          "y": 600
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 55
+        },
+        "target": {
+          "__i": 57
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "edge.expanded": true,
+        "icons": {
+          "fromArrow": {
+            "position": 15,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "fromArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 56
+        },
+        "target": {
+          "__i": 57
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "ortho",
+        "edge.expanded": true,
+        "icons": {
+          "fromArrow": {
+            "position": 15,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "fromArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 58,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "下属单位Web/检索服务中间点1",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 730,
+          "y": 400
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 59,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "下属单位web/mas中间点2",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 743,
+          "y": 590
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 60,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "下属单位web/mas中间点3",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 1040,
+          "y": 590
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 58
+        },
+        "target": {
+          "__i": 59
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v",
+        "icons": {
+          "fromArrow": {
+            "position": 15,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "fromArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 59
+        },
+        "target": {
+          "__i": 60
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "h.v"
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 60
+        },
+        "target": {
+          "__i": 36
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "v.h",
+        "edge.expanded": true,
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 90,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "监控中点",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 1130,
+          "y": 890
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 91,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "监控中间点",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 1130,
+          "y": 985
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 91
+        },
+        "target": {
+          "__i": 90
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "boundary",
+        "edge.target.offset.x": -1,
+        "edge.source.offset.y": -2,
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 92,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "oracle点",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 658,
+          "y": 985
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 91
+        },
+        "target": {
+          "__i": 92
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "boundary",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 93,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "外网选件中间点",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 510,
+          "y": 985
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 94,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "外网选件点",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 510,
+          "y": 890
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 93
+        },
+        "target": {
+          "__i": 94
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "boundary",
+        "edge.target.offset.x": -1,
+        "edge.source.offset.y": -2,
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 95,
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "displayName": "外网选件中间点",
+        "width": 0,
+        "height": 0,
+        "position": {
+          "x": 600,
+          "y": 985
+        }
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "p": {
+        "parent": {
+          "__i": 2378
+        },
+        "source": {
+          "__i": 93
+        },
+        "target": {
+          "__i": 95
+        }
+      },
+      "s": {
+        "2d.movable":false,
+        "edge.color": "rgb(73,99,173)",
+        "edge.width": 1,
+        "edge.type": "boundary",
+        "icons": {
+          "toArrow": {
+            "position": 19,
+            "width": 40,
+            "height": 20,
+            "keepOrien": true,
+            "names": [
+              "toArrow"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

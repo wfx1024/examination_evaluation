@@ -1,0 +1,134 @@
+﻿body {
+  margin:0px;
+  background-image:none;
+  position:static;
+  left:auto;
+  width:364px;
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+.form_sketch {
+  border-color:transparent;
+  background-color:transparent;
+}
+#base {
+  position:absolute;
+  z-index:0;
+}
+#u4756 label {
+  left:0px;
+  width:100%;
+}
+#u4756_img {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:2px;
+  width:12px;
+  height:12px;
+}
+#u4756 {
+  border-width:0px;
+  position:absolute;
+  left:13px;
+  top:11px;
+  width:351px;
+  height:16px;
+  display:flex;
+  font-family:'微软雅黑';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  color:#000000;
+}
+#u4756 .text {
+  position:absolute;
+  align-self:center;
+  padding:2px 2px 2px 2px;
+  box-sizing:border-box;
+}
+#u4756_img.selected {
+}
+#u4756.selected {
+}
+#u4756_img.disabled {
+}
+#u4756.disabled {
+}
+#u4756_text {
+  border-width:0px;
+  position:absolute;
+  left:14px;
+  top:0px;
+  width:335px;
+  word-wrap:break-word;
+  text-transform:none;
+}
+#u4756_input {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:0px;
+  height:0px;
+  opacity:0;
+}
+#u4757 label {
+  left:0px;
+  width:100%;
+}
+#u4757_img {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:2px;
+  width:12px;
+  height:12px;
+}
+#u4757 {
+  border-width:0px;
+  position:absolute;
+  left:13px;
+  top:41px;
+  width:351px;
+  height:16px;
+  display:flex;
+  font-family:'微软雅黑';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  color:#000000;
+}
+#u4757 .text {
+  position:absolute;
+  align-self:center;
+  padding:2px 2px 2px 2px;
+  box-sizing:border-box;
+}
+#u4757_img.selected {
+}
+#u4757.selected {
+}
+#u4757_img.disabled {
+}
+#u4757.disabled {
+}
+#u4757_text {
+  border-width:0px;
+  position:absolute;
+  left:14px;
+  top:0px;
+  width:335px;
+  word-wrap:break-word;
+  text-transform:none;
+}
+#u4757_input {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:0px;
+  height:0px;
+  opacity:0;
+}

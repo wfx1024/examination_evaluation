@@ -1,0 +1,499 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+}
+ul,li{
+	list-style: none;
+}
+body,html{
+	height: 100%;
+	overflow:hidden;
+}
+body{
+	background-image:url(/static/images/jkBg.jpg) ;
+	background-size:100% 100%;
+}
+.sTtitle{
+	font-size: .92rem;
+	color: #fff;
+	text-align: center;
+	margin-top: .38rem;
+}
+.tRtime{
+	position: absolute;
+	right: .6rem;
+	top: .68rem;
+	font-size: .4rem;
+	color: #42aad8;
+}
+.tRtime span{
+	font-size: .34rem;
+	color: #42aad8;
+	line-height: .5rem;
+	padding-right: .2rem;
+	position: relative;
+	top: -0.06rem;
+}
+.sTCenterBox{
+	overflow: hidden;
+	margin-top: .5rem;
+	height: 87.5%;
+}
+.StCLBox{
+	padding-left: .6rem;
+	width: 27.5%;
+	float: left;
+	height: 100%;
+}
+.dyfwBox{
+	height: 34%;
+}
+.mKtitle{
+	height: 1rem;
+	width: 4.15rem;
+	background-image:url(/static/images/mkTitleBg_03.png) ;
+	background-size:100% 100%;
+	margin: 0 auto;
+	font-size: .44rem;
+	text-align: center;
+	line-height: 1rem;
+	color: #fff;
+	font-weight: bold;
+	margin-bottom: .4rem;
+}
+.TnumBox{
+	margin-bottom: 4%;
+	height: 38%;
+}
+.TnumIT{
+    display: block;
+	width: 6.63rem;
+	height: 6.98%;
+	background-image:url(/static/images/numBg2_03.png);
+	background-size: 100% 100%;
+	margin: 0 auto;
+}
+.TnumZBox{
+	background-image:url(/static/images/numBg_03.png) ;
+	background-repeat:repeat-x;
+	background-size: auto 100%;
+	height: 86.04%;
+	padding-top: 1px;
+}
+.TnumZBox ul{
+	overflow: hidden;
+	margin:0 auto;
+	width: 9.17rem;
+	height: 58.5%;
+	margin-top: 6.5%;
+}
+.TnumZBox ul li.TnumZli{
+	width: .74rem;
+	height: 100%;
+	background-image: url(/static/images/numBg1_03.png);
+	background-size: 100% 100%;
+	line-height:1em ;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: bold;
+	color: #00ffff;
+}
+.TnumZBox ul .numD{
+	width: .14rem;
+	height:100%;
+	float: left;
+	position: relative;
+}
+.TnumZBox ul .numD span{
+	width: .14rem;
+	height: .14rem;
+	background: #39bfde;
+	position: absolute;
+	top:50%;
+	margin-top: -0.07rem;
+}
+.TnumZBox ul li{
+	margin:0 0.1rem;
+	float: left;
+}
+.TnumIB{
+	display: block;
+	width: 6.63rem;
+	height: 6.98%;
+	background-image:url(/static/images/numBg1_07.png);
+	background-size: 100% 100%;
+	margin: 0 auto;
+}
+.BnumBox{
+	height: 55.5%;
+}
+.BnumBox .BnumLi{
+	width: 4.8rem;
+	height: 100%;
+	background-image: url(/static/images/numBg3_03.png);
+	background-size:100% 100% ;
+}
+.BnumBox .BnumLi i.TnumIT{
+	width: 2.59rem;
+	height: .13rem;
+	background-image:url(/static/images/numBg5_03.png);
+	margin-top: 6%;
+	margin-bottom: 3%;
+	opacity: 0.7;
+} 
+.BnumBox .BnumLi i.TnumIB{
+	width: 2.59rem;
+	height: .13rem;
+	margin-bottom: .12rem;	
+	background-image:url(/static/images/numBg5_06.png) ;
+	opacity: 0.7;
+}
+.BnumBox .BnumLiL{
+	float: left;
+}
+
+.BnumBox .BnumLiR{
+	float: right;
+}
+.BnumLiTitle{
+	text-align: center;
+	font-size: .36rem;
+	color: #fff;
+	font-weight: bold;
+}
+.BnumLiTitleB{
+	text-align: center;
+	font-size: .3rem;
+	color: #39bfde;
+}
+.BnumLiUl{
+    height: 34%;
+	margin: 0 auto;
+	width: 4.2rem;
+	padding-top: 4.5%;
+	margin-bottom: 5%;
+}
+.BnumLiUl li.TnumZli{
+	width: .5rem;
+	height: 100%;
+	background-image: url(/static/images/numBg1_03.png);
+	background-size: 100% 100%;
+	line-height:.78rem ;
+	text-align: center;
+	font-size: .7rem;
+	font-weight: bold;
+	color: #00ffff;
+}
+.BnumLiUl .numD{
+	width: .09rem;
+	height: 100%;
+	float:left;
+    position: relative;
+}
+.BnumLiUl .numD span{
+	width: .09rem;
+	height: .09rem;
+	background: #39bfde;
+	position: absolute;
+	top:50%;
+	margin-top:-.045rem;
+}
+.BnumLiUl li{
+	margin:0 0.14rem;
+	float: left;
+}
+.xxgkBox{
+	margin-top: 8.1%;
+	height: 53.2%;
+	background-image: url(/static/images/LbBg_03.png);
+	background-size: 100% 100%;
+    padding-top: 3.6%;
+    position: relative;
+}
+.xxgkImg{
+	position: absolute;
+	left: 50%;
+	top: 72%;
+	width: 39%;
+	z-index: -1;
+	opacity: 0;
+	transition: 1s;
+	-moz-transition: 1s; /* Firefox 4 */
+	-webkit-transition: 1s; /* Safari and Chrome */
+	-o-transition: 1s; /* Opera */
+}
+.mKtitleXxgk{
+	width: 6.82rem;
+	height: 9.8%;
+	background-image: url(/static/images/mkTitleBg2_03.png);
+}
+.StCRBox{
+	width: 26.18rem;
+	float: right;
+	height: 100%;
+	margin-right: .62rem;
+}
+.listUlBox{
+	width: 100%;
+	height: 52.5%;
+	padding: 0.22rem .78rem 0;
+	background-image: url(/static/images/listBg_03.png);
+	background-size: 100% 100%;
+}
+.listUlheader{
+	font-size:.38rem;
+	color: #39bfde;
+	overflow: hidden;
+}
+.listUlheader span{
+	display: block;
+	float: left;
+	padding:1.23% 0 1.23% .75rem;
+	
+}
+.listUlheader span:nth-child(1){
+	width: 15.83rem;
+	
+}
+.listUlheader span:nth-child(2){
+	width: 4.26rem;
+	
+}
+.listUlheader span:nth-child(3){
+	width: 4.5rem;	
+	padding-left: 0;
+	text-align: center;
+}
+.listUl{
+	height: 78.7%;
+}
+.listUl li{
+	height: 10%;
+	margin-bottom: .78%;
+	background: #083e6f;
+	border-radius: .1rem;
+	border-left: .11rem solid #258cae;
+	padding-top: .45%;
+}
+.listUl li.active{
+	border-left: .11rem solid #2fe5f0;
+	background: #135693;
+	-webkit-box-shadow: 0 0 10px #9ec9ee;
+    -moz-box-shadow: 0 0 10px #9ec9ee;
+    box-shadow: 0 0 10px #9ec9ee;
+}
+.listUl li .listUlTitle{
+	display: block;
+	font-size: .34rem;
+	color: #fdfdfe;
+	float: left;
+	width: 15.71rem;
+	border-right:0.02rem solid #258cae;
+	padding:0 .38rem;
+	white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.listUlName{
+	width: 4.26rem;
+	display: block;
+	font-size: .34rem;
+	color: #fdfdfe;
+	float: left;
+	border-right:0.02rem solid #258cae;
+	padding-left: .75rem;
+
+	
+}
+.listUlTime{
+	width: 4.5rem;
+	display: block;
+	font-size: .34rem;
+	color: #fdfdfe;
+	float: left;
+	text-align: center;
+}
+.fwqBox{
+	width: 100%;
+	height: 36.51%;
+	background-image: url(/static/images/diagramBg_03.png);
+	background-size: 100% 100%;
+	margin-top: 2%;
+	padding-top: 1.5%;
+}
+.fwqLTitle{
+	width: 1rem;
+	height: 60.57%;
+	text-align: center;
+	font-size: .44rem;
+    text-align: center;
+    color: #fff;
+    line-height:.46rem ;
+    font-weight: bold;
+    padding: 2.3% .2rem;
+    background-image: url(/static/images/fwqBg_03.png);
+	background-size: 100% 100%;
+	margin-left: .38rem;
+	float: left;
+}
+.fwqUl{
+	height: 88.69%;
+	width: 13.20rem;
+	float: left;
+	margin-left: .6rem;
+}
+.fwqUl li{
+	width: 2.94rem;
+	height: 49%;
+	background-image:url(/static/images/fwqliBg_03.png);
+    background-size: 100% 100%;
+   padding-top: .8%;
+   margin-right: .48rem;
+   margin-bottom: .24rem;
+   float: left;
+}
+.fwqUl li:nth-child(4n){
+	margin-right: 0rem;
+}
+.fwqUl li i{
+	width: 1.85rem;
+	height: 1.85rem;
+	display: block;
+	background-image:url(/static/images/fwqBg_06.gif);
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+.fwqUl li p{
+	width: 2.53rem;
+	height: .49rem;
+	text-align: center;
+	color: #1fefa2;
+	font-size: .28rem;
+	text-align: center;
+	background-image:url(/static/images/fwqBg_13.png);
+    background-size: 100% 100%;
+    margin: 1.5% auto 0;
+}
+
+.fwqUl li.active i{
+	background-image:url(/static/images/fwqBg_08.gif);
+}
+.fwqUl li.active p{
+	color: #ff743f;
+}
+#fwqEchart{
+	width: 10.34rem;
+	height:92%;
+	margin-left: .44rem;
+	float: left;
+	background-image:url(/static/images/fwqechartBg_03.png);
+    background-size: 100% 100%;
+}
+#xxgkEchart{
+	width: 98.2%;
+	margin: 1% auto 0;
+	height: 84%;
+	background-image:url(/static/images/LbBg2_03.png) ;
+	background-size:100% auto ;
+	background-repeat:no-repeat ;
+	padding: 1% 0 0;
+}
+.mKtitleFb{
+	overflow: hidden;
+	padding-left: 30%;
+}
+.mKtitleFb .mKtitle{
+	float: left;
+}
+.mKtitleFbNum{
+	float: left;
+	margin-top: 0.22rem;
+}
+.mKtitleFbNum i.mKtitleFbNumiL{
+	display: block;
+	margin:0 .18rem;
+	float: left;
+	width: 0.26rem;
+	height: 0.2rem;
+	background-image: url(/static/images/numfb_06.png);
+	background-size:100% ;
+	margin-top: 0.195rem;
+}
+.mKtitleFbNum i.mKtitleFbNumiR{
+	display: block;
+	margin:0 .1rem;
+	float: left;
+	width: 0.26rem;
+	height: 0.2rem;
+	margin-top: 0.195rem;
+	background-image: url(/static/images/numfb_09.png);
+	background-size:100% ;
+}
+.mKtitleFbNum span{
+	color: #42aad8;
+	font-size: .32rem;
+	float: left;
+	line-height: .59rem;
+	padding-right:0.16rem ;
+}
+.mKtitleFbNum ul{
+	overflow: hidden;
+	float: left;
+}
+
+.mKtitleFbNum ul li{
+	float: left;
+	background-image: url(/static/images/numfb_03.png);
+	background-size:100% ;
+	width: 0.38rem;
+	height: 0.59rem;
+	text-align: center;
+	line-height: .59rem;
+	font-size:.5rem;
+	font-weight: bold;
+	color: #42aad8;
+	margin:0 .085rem;
+}
+
+
+@-webkit-keyframes rotation{
+	from {-webkit-transform: rotate(0deg);}
+	to {-webkit-transform: rotate(360deg);}
+}
+
+.Rotation{
+	-webkit-transform: rotate(360deg);
+	animation: rotation 5s linear infinite;
+	-moz-animation: rotation 5s linear infinite;
+	-webkit-animation: rotation 5s linear infinite;
+	-o-animation: rotation 5s linear infinite;
+}
+@media screen and (max-width:1440px) {
+	.xxgkImg{
+		position: absolute;
+		left: 50%;
+		top: 70%;
+		width: 42%;
+	}
+}
+@media screen and (max-width:1520px) {
+	.dyfwBox .digit_top{
+		position: relative;
+		top: 2px;
+	}
+	.dyfwBox .digit_wrap{
+		position: relative;
+		top: 3px;
+	}
+	.TnumZBox ul .dataStatistics .digit > div.digit_bottom .digit_wrap{
+		margin-top: -70% !important;
+	}
+	.BnumLiUl .dataStatistics .digit > div.digit_bottom .digit_wrap{
+		margin-top: -63% !important;
+	}
+}

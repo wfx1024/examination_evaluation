@@ -1,0 +1,80 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /kspj
+spring:
+  datasource:
+    druid:
+      enable: false
+  security:
+    basic:
+      enabled: false
+  application:
+    name: kspj
+  freemarker:
+    enabled: false
+  thymeleaf:
+    enabled: false
+    check-template: false
+  mvc:
+    servlet:
+      load-on-startup: 1
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 20
+        max-idle: 20
+        min-idle: 0
+        max-wait: 60s
+application:
+  session-timeout: 1800000
+#  boot:
+#    admin:
+#      client:
+#        url: http://127.0.0.1:8090
+#        username: admin
+#        password: eprobj
+#        instance:
+#          service-base-url: http://127.0.0.1:8080
+#          prefer-ip: true
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    serviceUrl:
+#      defaultZone: http://admin:eprobj@localhost:8081/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+      health:
+        show-details: ALWAYS
+info: #定义各种额外的详情给服务端显示
+  app:
+    name: "@project.name@" #从pom.xml中获取
+    description: "@project.description@"
+    version: "@project.version@"
+    company: "eprobj"
+    org: "Ministry of Ecology and Environment"
+logging:
+  level:
+    root: info
+  config: classpath:logback-dev.xml
+mysql:
+  jdbc:
+    driver: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/kscj?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=false
+    username: root
+    password: 123456

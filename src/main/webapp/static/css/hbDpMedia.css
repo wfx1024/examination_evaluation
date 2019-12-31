@@ -1,0 +1,414 @@
+*{
+    padding:0;
+    margin: 0;
+    border: 0;
+    font-family: "微软雅黑";
+}
+a{
+    text-decoration: none;
+}
+ul,li{
+    list-style: none;
+}
+body{
+    background: #121b47;
+}
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    line-height: 0
+}
+.hbDp {
+    min-width:1000px;
+    background: url(../../static/images/dpBg.jpg) no-repeat;
+    background-size: contain;
+    position: relative;
+}
+.hbDpTime{
+    font-size: 17px;
+    color: #7298d7;
+    position: absolute;
+    top:30px;
+    right:35px;
+}
+.hbDpBox {
+    padding: 120px 35px 0;
+    overflow: hidden;
+    display: flex;
+}
+.hbDpLBox {
+    width: 33%;
+    margin-right: 2%;
+}
+.hbDpZBox{
+  flex: 1;
+}
+.hbDpRBox{
+    margin-left: 2%;
+    width: 30%;
+}
+.dpTitle1{
+    height: 45px;
+    background: url(../../static/images/hbDp_03.png) no-repeat;
+    background-size: contain;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 35px;
+    color: #fff;
+}
+.dpTitle2{
+    height: 45px;
+    background: url(../../static/images/hbDp_05.png) no-repeat;
+    background-size: contain;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 35px;
+    color: #fff;
+}
+.newManuscriptBox{
+    overflow: hidden;
+}
+.stage{
+    min-height: 530px;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.stage ul{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.stage ul li{
+    padding: 8px 0;
+    overflow: hidden;
+}
+.draftName{
+    float: left;
+    width: 28%;
+    font-size:14px ;
+    color: #02baeb;
+    font-weight: bold;
+    text-align: right;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    margin-right: 20px;
+}
+
+.stage ul li .draftRlist{
+    margin-left:28%;
+}
+.stage ul li .draftRlist .draftRT{
+    width: 50%;
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-right: 6%;
+}
+.stage ul li .draftRlist .draftRT div{
+    height: 12px;
+    background: -webkit-linear-gradient(left, #0591eb , #08e2f1); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #0591eb, #08e2f1); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #0591eb, #08e2f1); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #0591eb , #08e2f1); /* 标准的语法 */
+    border-radius: 0 50px 50px 0;
+}
+.stage ul li .draftRlist .draftRW{
+    color: #08e0f1;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.newManuscript{
+    margin-top: 20px;
+}
+.newManuscriptHeader{
+    height: 40px;
+    line-height: 40px;
+    background: url(../../static/images/hbDp_133.png);
+    background-size: contain;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.newManuscriptHeader div{
+    font-size:15px ;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.newManuscriptC{
+    position: relative;
+    min-height: 460px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.newManuscriptCBox{
+    padding-bottom: 20px;
+    background: url(../../static/images/hbDp_30.png);
+}
+.newManuscriptC ul{
+    /*width: 100%;*/
+    position: absolute;
+    top: 0;
+}
+.newManuscriptC ul li{
+    overflow: hidden;
+    height: 36px;
+    line-height: 36px;
+    font-size: 13px;
+    color: #c1e7ff;
+    box-sizing: border-box;
+    border-bottom: 1px solid #357ab2;
+    display:table;table-layout:fixed;width:100%;
+}
+.manuscriptTitle{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:table-cell;
+    text-align: center;
+}
+.manuscriptName{
+    color: #82caf7;
+    display:table-cell;
+    text-align: center;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.manuscriptTime{
+    color: #57ade3;
+    display:table-cell;
+    text-align: center;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.dpKhHeader{
+    height: 36px;
+    border-bottom: 2px solid #156fae;
+    line-height: 36px;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+}
+.dpKh{
+    border-radius: 3px;
+    border:2px solid #156fae;
+    margin-top: 22px;
+    background:  url(../../static/images/hbDp_13.png) no-repeat;
+    margin-bottom: 22px;
+}
+.dpKhHeader div{
+    text-align: center;
+    flex: 1;
+}
+.dpKhHeader div:nth-child(odd){
+
+}
+
+.dpKhHeader div:nth-child(even){
+
+    border-right: 2px solid #156fae;
+    box-sizing: border-box;
+}
+.dpKhHeader div:last-child{
+    border-right: none;
+}
+.dpKhUlBox{
+    background: url(../../static/images/hbDp_30.png);
+    height: 375px;
+    position: relative;
+    overflow: hidden;
+}
+.dpKhUlBox ul{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.dpKhUlBox ul li{
+    height: 75px;
+    border-bottom: 2px solid #156fae;
+    line-height: 75px;
+    font-size: 13px;
+    color: #a2dbff;
+    box-sizing: border-box;
+    display: flex;
+}
+.dpKhUlBox ul li div{
+    flex:1;
+    text-align: center;
+}
+.dpKhUlBox ul li div:nth-child(odd){
+
+}
+
+.dpKhUlBox ul li div:nth-child(even){
+    border-right: 2px solid #156fae;
+    box-sizing: border-box;
+}
+
+.dpKhUlBox ul li div:last-child{
+    border-right: none;
+}
+.visitNumTBox{
+    overflow: hidden;
+    margin-top: 15px;
+    height: 75px;
+    line-height: 75px;
+}
+.visitNumTBox p{
+    float: left;
+    font-size:20px;
+    color: #00d0f2;
+}
+.visitNumTBox span{
+    display: block;
+    float: left;
+    width: 54px;
+    height: 75px;
+    background: url(../../static/images/hbDp_10.png) no-repeat;
+    background-size: contain;
+    text-align: center;
+    font-size: 46px;
+    color: #f9d98b;
+    font-weight: bold;
+    margin: 0 3px;
+}
+.visitNumTBox p:nth-child(1){
+    margin-right: 30px;
+}
+.visitNumTBox .visitNumTPlast{
+    float: none;
+}
+.visitNumZBox{
+    overflow: hidden;
+    margin-top: 12px;
+}
+.visitNumZBox .visitNumZ{
+    width: 46%;
+    background: url(../../static/images/hbDp2_03.png) no-repeat;
+    background-size: contain;
+    padding-right: 2%;
+    float: left;
+    height: 66px;
+    position: relative;
+}
+.visitNumZBox div:nth-child(1){
+    margin-right:3%;
+}
+
+
+.visitTypeW{
+    overflow: hidden;
+    padding:12px 0 0 30%;
+}
+.visitTypeW span:nth-child(1){
+    font-size: 15px;
+    color: #f9d98a;
+    float: left;
+
+
+}
+.visitTypeW span:nth-child(2) {
+    font-size: 15px;
+    color: #08daf0;
+    float: right;
+}
+
+.visitTypeW p{
+    overflow: hidden;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 500;
+}
+.visitTypeW p span.visitCountNum{
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    padding-right: 5px;
+    float: none;
+}
+
+
+.dpAlertBox{
+    margin-top: 10px;
+    overflow: hidden;
+}
+.dpAlert{
+    margin-top: 22px;
+}
+.dpAlertLi{
+    width: 45%;
+    height: 77px;
+    line-height: 77px;
+    background: #226ace;
+    float: left;
+    text-align: center;
+}
+.dpAlertLi img{
+    margin-left: 15px;
+    position: relative;
+    top: 25px;
+    height:45px;
+}
+.dpAlertBox .dpAlertLi:nth-child(1) span{
+    font-size: 20px;
+    color: #daf0a4;
+}
+.dpAlertBox .dpAlertLi:nth-child(2){
+    float: right;
+}
+.dpAlertBox .dpAlertLi:nth-child(2) span{
+    font-size: 20px;
+    color: #ffb76b;
+}
+.dpFlow{
+    background: url(../../static/images/hbDp_30.png);
+    height: 406px;
+    position: relative;
+    margin-top: 28px;
+    padding-top:65px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+.dpFlow p{
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    left: 20px;
+    top: 24px;
+}
+#dpFlowEchart{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.mt56{
+    margin-top:28px;
+}
+#hotWordsT{
+    width: 100%;
+    height: 440px;
+    position: relative;
+}
+#hotWords2T {
+    width: 100%;
+    height: 440px;
+}
+
+

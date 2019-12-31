@@ -1,0 +1,307 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "微软雅黑";
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+body {
+  background: #121b47;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  line-height: 0;
+}
+.mt28 {
+  margin-top: 0.74666667rem;
+}
+.hbDp {
+  width: 100%;
+  background: url(../../static/images/dpBg.jpg);
+  background-size: cover;
+  position: relative;
+}
+.hbDp .hbDpTime {
+  font-size: 17px;
+  color: #7298d7;
+  position: absolute;
+  top: 0.4rem;
+  right: 0.93333333rem;
+}
+[data-dpr="2"] .hbDp .hbDpTime {
+  font-size: 34px;
+}
+[data-dpr="3"] .hbDp .hbDpTime {
+  font-size: 51px;
+}
+.hbDp .hbDpBox {
+  padding: 1.6rem 0.93333333rem 0;
+  margin-top: 0.26666667rem;
+  display: flex;
+  overflow: hidden;
+}
+.hbDp .hbDpBox .hbDpLBox {
+  width: 30%;
+  float: left;
+  margin-right: 2%;
+}
+.hbDp .hbDpBox .hbDpLBox .draftBox {
+  overflow: hidden;
+}
+.hbDp .hbDpBox .hbDpLBox .draftBox .dpTitle1 {
+  height: 1.2rem;
+  background: url(../../static/images/hbDp_03.png);
+  background-size: cover;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 0.93333333rem;
+  color: #fff;
+}
+[data-dpr="2"] .hbDp .hbDpBox .hbDpLBox .draftBox .dpTitle1 {
+  font-size: 44px;
+}
+[data-dpr="3"] .hbDp .hbDpBox .hbDpLBox .draftBox .dpTitle1 {
+  font-size: 66px;
+}
+.hbDp .hbDpBox .hbDpLBox .draftBox .stage {
+  min-height: 8rem;
+  margin-top: 0.26666667rem;
+  position: relative;
+  overflow: hidden;
+}
+.hbDp .hbDpBox .hbDpLBox .draftBox .stage ul {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.hbDp .hbDpBox .hbDpLBox .draftBox .stage ul li {
+  padding: 0.21333333rem 0;
+  overflow: hidden;
+}
+.hbDp .hbDpBox .hbDpLBox .draftBox .stage ul li .draftName {
+  float: left;
+  width: 44%;
+  font-size: 14px;
+  color: #02baeb;
+  font-weight: bold;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 0.26666667rem;
+}
+[data-dpr="2"] .hbDp .hbDpBox .hbDpLBox .draftBox .stage ul li .draftName {
+  font-size: 28px;
+}
+[data-dpr="3"] .hbDp .hbDpBox .hbDpLBox .draftBox .stage ul li .draftName {
+  font-size: 42px;
+}
+.hbDp .hbDpBox .hbDpLBox .draftBox .stage ul li .draftRlist {
+  margin-left: 44%;
+}
+.hbDp .hbDpBox .hbDpLBox .draftBox .stage ul li .draftRlist .draftRT {
+  width: 50%;
+  overflow: hidden;
+  float: left;
+  margin-right: 0.26666667rem;
+}
+.hbDp .hbDpBox .hbDpLBox .draftBox .stage ul li .draftRlist .draftRT div {
+  height: 0.32rem;
+  background: -webkit-linear-gradient(left, #0591eb, #08e2f1);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #0591eb, #08e2f1);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #0591eb, #08e2f1);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #0591eb, #08e2f1);
+  /* 标准的语法 */
+  border-radius: 0 1.33333333rem 1.33333333rem 0;
+}
+.hbDp .hbDpBox .hbDpLBox .draftBox .stage ul li .draftRlist .draftRW {
+  color: #08e0f1;
+  font-size: 12px;
+  overflow: hidden;
+}
+[data-dpr="2"] .hbDp .hbDpBox .hbDpLBox .draftBox .stage ul li .draftRlist .draftRW {
+  font-size: 24px;
+}
+[data-dpr="3"] .hbDp .hbDpBox .hbDpLBox .draftBox .stage ul li .draftRlist .draftRW {
+  font-size: 36px;
+}
+.hbDp .hbDpBox .hbDpLBox .hotWords {
+  overflow: hidden;
+}
+.hbDp .hbDpBox .hbDpLBox .hotWords .dpTitle1 {
+  height: 1.2rem;
+  background: url(../../static/images/hbDp_03.png) no-repeat;
+  background-size: cover;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 0.93333333rem;
+  color: #fff;
+}
+[data-dpr="2"] .hbDp .hbDpBox .hbDpLBox .hotWords .dpTitle1 {
+  font-size: 44px;
+}
+[data-dpr="3"] .hbDp .hbDpBox .hbDpLBox .hotWords .dpTitle1 {
+  font-size: 66px;
+}
+.hbDp .hbDpBox .hbDpLBox .hotWords #hotWordsT {
+  width: 100%;
+  position: relative;
+}
+.hbDp .hbDpBox .hbDpZBox {
+  flex: 1;
+}
+.hbDp .hbDpBox .hbDpZBox .newManuscriptBox {
+  overflow: hidden;
+}
+.hbDp .hbDpBox .hbDpZBox .newManuscriptBox .dpTitle2 {
+  height: 1.2rem;
+  background: url(../../static/images/hbDp_05.png) no-repeat;
+  background-size: cover;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 0.93333333rem;
+  color: #fff;
+}
+[data-dpr="2"] .hbDp .hbDpBox .hbDpZBox .newManuscriptBox .dpTitle2 {
+  font-size: 44px;
+}
+[data-dpr="3"] .hbDp .hbDpBox .hbDpZBox .newManuscriptBox .dpTitle2 {
+  font-size: 66px;
+}
+.hbDp .hbDpBox .hbDpZBox .newManuscriptBox .newManuscript {
+  margin-top: 0.53333333rem;
+}
+.hbDp .hbDpBox .hbDpZBox .newManuscriptBox .newManuscript .newManuscriptHeader {
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  background: url(../../static/images/hbDp_133.png);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.hbDp .hbDpBox .hbDpZBox .newManuscriptBox .newManuscript .newManuscriptHeader div {
+  font-size: 15px ;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+.hbDp .hbDpBox .hbDpZBox .newManuscriptBox .newManuscript .newManuscriptCBox {
+  padding-bottom: 0.53333333rem;
+  background: url(../../static/images/hbDp_30.png);
+  overflow: hidden;
+}
+.hbDp .hbDpBox .hbDpZBox .newManuscriptBox .newManuscript .newManuscriptCBox .newManuscriptC {
+  position: relative;
+  padding: 0 0.42666667rem;
+  box-sizing: border-box;
+  min-height: 6.82666667rem;
+}
+.hbDp .hbDpBox .hbDpZBox .newManuscriptBox .newManuscript .newManuscriptCBox .newManuscriptC ul {
+  /*width: 100%;*/
+  position: absolute;
+  top: 0;
+}
+.hbDp .hbDpBox .hbDpZBox .newManuscriptBox .newManuscript .newManuscriptCBox .newManuscriptC ul li {
+  height: 0.96rem;
+  line-height: 0.96rem;
+  font-size: 13px;
+  color: #c1e7ff;
+  box-sizing: border-box;
+  border-bottom: 1px solid #357ab2;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+[data-dpr="2"] .hbDp .hbDpBox .hbDpZBox .newManuscriptBox .newManuscript .newManuscriptCBox .newManuscriptC ul li {
+  font-size: 26px;
+}
+[data-dpr="3"] .hbDp .hbDpBox .hbDpZBox .newManuscriptBox .newManuscript .newManuscriptCBox .newManuscriptC ul li {
+  font-size: 39px;
+}
+.hbDp .hbDpBox .hbDpZBox .newManuscriptBox .newManuscript .newManuscriptCBox .newManuscriptC ul li .manuscriptTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: table-cell;
+  text-align: center;
+}
+.hbDp .hbDpBox .hbDpZBox .newManuscriptBox .newManuscript .newManuscriptCBox .newManuscriptC ul li .manuscriptName {
+  color: #82caf7;
+  display: table-cell;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hbDp .hbDpBox .hbDpZBox .newManuscriptBox .newManuscript .newManuscriptCBox .newManuscriptC ul li .manuscriptTime {
+  color: #57ade3;
+  display: table-cell;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hbDp .hbDpBox .hbDpZBox .dpKhBox {
+  overflow: hidden;
+}
+.hbDp .hbDpBox .hbDpZBox .dpKhBox .dpTitle2 {
+  height: 1.2rem;
+  background: url(../../static/images/hbDp_05.png) no-repeat;
+  background-size: cover;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 0.93333333rem;
+  color: #fff;
+}
+[data-dpr="2"] .hbDp .hbDpBox .hbDpZBox .dpKhBox .dpTitle2 {
+  font-size: 44px;
+}
+[data-dpr="3"] .hbDp .hbDpBox .hbDpZBox .dpKhBox .dpTitle2 {
+  font-size: 66px;
+}
+.hbDp .hbDpBox .hbDpZBox .dpKhBox .dpKh {
+  border-radius: 0.08rem;
+  border: 0.05333333rem solid #156fae;
+  margin-top: 0.58666667rem;
+  background: url(../../static/images/hbDp_13.png) no-repeat;
+  margin-bottom: 0.58666667rem;
+}
+.hbDp .hbDpBox .hbDpZBox .dpKhBox .dpKh .dpKhHeader {
+  height: 36px;
+  border-bottom: 2px solid #156fae;
+  line-height: 36px;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+}
+.hbDp .hbDpBox .hbDpZBox .dpKhBox .dpKh .dpKhHeader div {
+  text-align: center;
+  flex: 1;
+}
+.hbDp .hbDpBox .hbDpZBox .dpKhBox .dpKh .dpKhHeader div:nth-child(even) {
+  border-right: 0.05333333rem solid #156fae;
+}
+.hbDp .hbDpBox .hbDpZBox .dpKhBox .dpKh .dpKhHeader div:last-child {
+  border-right: none;
+}
+.hbDp .hbDpBox .hbDpRBox {
+  margin-left: 2%;
+  width: 30%;
+}

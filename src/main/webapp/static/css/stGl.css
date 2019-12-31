@@ -1,0 +1,780 @@
+*{
+	padding:0;
+	margin: 0;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+}
+ul{
+	margin-bottom: 0;
+}
+ul,li{
+	list-style: none;
+}
+.glBox{
+	background: #e9ecf3;
+}
+.glheaderBox{
+	background: #fff;
+	height: 74px;
+	box-shadow: 0 1px 10px #e7eaf1;
+	-moz-box-shadow:0 1px 10px #e7eaf1;/*firefox*/ 
+	-webkit-box-shadow:0 1px 10px #e7eaf1;/*webkit*/  
+}
+.glheaderBox .gllogoName{
+	float: left;
+	font-size:22px;
+	color:#5b9bd1;
+	line-height: 74px;
+	display: block;
+	padding-left: 20px;
+	font-weight: bold;
+}
+.glheaderR{
+	float: right;
+	padding-right: 30px;
+	margin-top: 21px;
+}
+.glCloseBtn{
+	float: right;
+	width:16px;
+	height: 22px;
+	margin-top: 5px;
+	display: block;
+	background: url(../../static/images/GlHbjkGn.png) no-repeat;
+	margin-left: 22px;
+}
+.glTimeBox{
+	float: right;
+	font-size:16px;
+	color: #c3cddc;
+	margin-left: 22px;
+	line-height: 32px;
+}
+.glTimeBox span{
+	padding:0 5.5px;
+}
+.glSearchBox{
+	float: right;
+	width: 250px;
+	height: 32px;
+	position: relative;
+}
+.glSearchBox input{
+	outline: none;
+	width: 212px;
+	height: 30px;
+	border: 1px solid #ced6de;
+	line-height: 30px;
+	padding:0 24px 0 12px;
+	border-radius: 20px;
+	color: #ced6de;
+	font-size: 14px;
+}
+.glSearchBox a{
+	width:14px;
+	height: 14px;
+	display: block;
+	background: url(../../static/images/GlhbjkGn_29_03.png) no-repeat;
+	position: absolute;
+	top: 9px;
+	right: 9px;
+}
+.glCenterBox{
+	overflow: hidden;
+	position: relative;
+	margin-top: 20px;
+}
+.glCenterBox .glCenterL{
+	width: 235px;
+	height: 100%;
+	position: absolute;
+	left: 20px;
+	top: 0;
+	background: #fff;
+}
+.GlNav{
+	width: 100%;
+}
+.GlNav li{
+	
+    color: #485a6a;
+	font-size: 16px;
+	position: relative;
+	margin-top: 10px;
+}
+.GlNav li .GlNavLiA{
+	width: 100%;
+	height: 100%;
+	display: block;
+	color: #485a6a;
+	height: 43px;
+	line-height: 43px;
+}
+.GlNav li.active .GlNavLiA{
+	background: #f2f6f9;
+	color: #5b9bd1;
+	border-left:3px solid #5c9acf ;
+	width: 100%;
+	position: relative;
+	left: -3px;
+}
+.GlNav li.active i{
+	background: url(../../static/images/GlCenterImg_06.png) no-repeat;
+}
+.GlNav li .GlNavLiImg{
+	vertical-align: middle;
+	width: 18px;
+	padding:0 13px 0 19px;
+}
+.GlNav li i{
+	display: block;
+	width: 6px;
+	height: 9px;
+	background: url(../../static/images/GlCenterImg_38.png) no-repeat;
+	position: absolute;
+	right: 24px;
+	top: 17px;
+}
+
+.GlNav li ul li{
+	margin-top: 10px;
+}
+.GlNav li ul li a{
+	width: 100%;
+	height: 100%;
+	display: block;
+	color: #485a6a;
+	height: 43px;
+	line-height: 43px;
+	font-size: 16px;
+}
+.GlNav li ul li img{
+	padding:0 13px 0 32px;
+	vertical-align: middle;
+}
+.GlNav li a:hover{
+	color: #5b9bd1;
+}
+.glCenterR{
+	margin-left: 276px;
+	padding-right: 20px;
+}
+.glCenterRTitle{
+	font-size: 20px;
+	font-weight: bold;
+	color: #697882;
+	height: 60px;
+	line-height: 62px;
+}
+.glCRTUl{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.glCRTUl li{
+	height: 138px;
+	width: 23.5%;
+	margin-right: 2%;
+	background: #fff;
+	float: left;
+	box-sizing: border-box;
+	padding:17px 0px 20px 20px;
+	position: relative;
+}
+.glCRTUl li .indexLiAbtn{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	height: 30px;
+	line-height: 30px;
+	background: #9dcbe6;
+	border-radius:5px ;
+	padding:0 14px;
+	color:#fff;
+}
+.glCRTUl li .glCRTUlLiTitle{
+	color: #697882;
+	font-size: 1.38rem;
+	margin-bottom: 16px;
+}
+.glCRTUl li .glCRTUlLiB{
+	overflow: hidden;
+}
+.glCRTUl li .glCRTUlLiB .glCRTUlImg{
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-right: 16px;
+}
+.glCRTUl li:nth-child(1) .glCRTUlLiB .glCRTUlImg{
+	background: #4db3a4 url(../../static/images/GlCenterImg_21.jpg) no-repeat center center;
+}
+.glCRTUl li:nth-child(2) .glCRTUlLiB .glCRTUlImg{
+	background: #f36a5a url(../../static/images/GlCenterImg_18.png) no-repeat center center;
+}
+.glCRTUl li:nth-child(3) .glCRTUlLiB .glCRTUlImg{
+	background: #9a7caf url(../../static/images/GlCenterImg_24.jpg) no-repeat center center;
+}
+.glCRTUl li:nth-child(4) .glCRTUlLiB .glCRTUlImg{
+	background: #5b9bd1 url(../../static/images/GlCenterImg2_03.png) no-repeat center center;
+}
+.glCRTUlNum{
+	float: left;
+}
+.glCRTUlNum p{
+	color: #8e9daa;
+	font-size: 14px;
+	padding:3px 0 0 3px;
+	margin-bottom: 3px;
+}
+.glCRTUlNum span{
+	font-family: 'Arial';
+	color: #3e4f5e;
+	font-size: 32px;
+}
+.glCenterRZBox{
+	overflow: hidden;
+}
+.glCRZL{
+	width: 49%;
+	float: left;
+	background: #fff;
+}
+.glCRZR{
+	width: 49%;
+	float: right;
+	background: #fff;
+}
+.glCRZNBox{
+	padding:0 20px 10px;
+}
+.glCRTitle{
+	color: #485a6a;
+	font-size: 20px;
+	height: 61px;
+	border-bottom: 1px solid #eef1f5;
+	line-height: 72px;
+}
+.glPieChart{
+	border-bottom: 1px solid #eef1f5;
+	height: 482px;
+	margin-top: 18px;
+	/*background-image:url(../../static/images/chartBg_03.png) ;*/
+	background-size:50% auto ;
+	background-position:50% 60% ;
+	background-repeat:no-repeat ;
+}
+.glLineChart{
+	height: 360px;
+}
+.reminderUlHeader{
+   height: 53px;
+   line-height:60px ;
+   color: #7894ac;
+   font-size: 18px;
+   padding-left: 40px !important;
+   overflow: hidden;
+}
+.reminderUlHeader span{
+	display: block;
+	font-size: 18px;
+	color: #7894ac;
+}
+.reminderUlHeader span:nth-child(1){
+	width: 35%;
+	float: left;
+}
+.reminderUlHeader span:nth-child(2){
+	width: 13%;
+	float: left;
+}
+.reminderUlHeader span:nth-child(3){
+	width: 12%;
+	float: left;
+}
+.reminderUlHeader span:nth-child(4){
+	width: 15%;
+	float: left;
+}
+.reminderUlBox{
+	height: 808px;
+	overflow:hidden;
+	overflow-y: scroll;
+	margin-bottom: 10px;
+}
+.reminderUl{
+	
+}
+.reminderUl li{
+	border:1px solid #f4f6fa;
+	border-radius:5px;
+	height: 48px;
+	margin-bottom: 8px;
+	padding-left: 20px;
+	-webkit-box-shadow: 0 0 8px #f4f6fa;
+    -moz-box-shadow: 0 0 8px #f4f6fa;
+    box-shadow: 0 0 8px #f4f6fa;
+    overflow: hidden;
+}
+.reminderUl li a{
+	float: left;
+	display: block;
+	width: 35%;
+	font-size: 16px;
+	color: #485a6a;
+	line-height: 48px;
+	padding-right: 15px;
+	white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    box-sizing: border-box;
+}
+.reminderUl li span{
+	display: block;
+	width: 14%;
+	font-size: 16px;
+	color: #8e9daa;
+	line-height: 48px;
+	float: left;
+}
+.reminderUl li span:nth-child(3){
+	width: 11%;
+}
+.reminderUl li .percentageBox{
+	width: 25%;
+	float: left;
+}
+.reminderUl li .percentageBox .percentageC{
+	width: 64%;
+	float: left;
+	height: 10px;
+	box-sizing: border-box;
+	border-bottom: 2px solid #d9deeb;
+	border-radius: 4px 0 0 4px;
+	margin-top: 19px;
+	margin-right: 5px;
+}
+.reminderUl li .percentageBox .percentageC span{
+	border-radius: 4px 0 0 4px;
+	display: block;
+	height: 10px;
+	box-sizing: border-box;
+}
+.reminderUl li .percentageBox .percentageC1 span{
+	background: #fac3bd;
+	border-right:4px solid #f36a5a;
+}
+.reminderUl li .percentageBox .percentageC2 span{
+	background: #bdd7ed;
+	border-right:4px solid #5b9bd1;
+}
+.reminderUl li .percentageBox .percentageC3 span{
+	background: #bfe3de;
+	border-right:4px solid #4db3a4;
+}
+.padding20{
+	padding:0 20px;
+}
+.marginB20{
+	margin-bottom: 20px;
+}
+.subStationHeader{
+	height: 52px;
+	line-height: 52px;
+}
+.subStationHeader span:nth-child(1){
+	width: 10%;
+	float: left;
+	font-size: 18px;
+	color: #7894ac;
+	box-sizing: border-box;
+	padding-left: 3px;
+}
+.subStationHeader span:nth-child(2){
+	width: 27%;
+	float: left;
+	font-size: 18px;
+	color: #7894ac;
+	box-sizing: border-box;
+}
+.subStationHeader span:nth-child(3){
+	width: 63%;
+	float: left;
+	font-size: 18px;
+	color: #7894ac;
+	box-sizing: border-box;
+	padding-left: 22%;
+}
+.subStationUl{
+	
+}
+.subStationUl li{
+ height: 20px;
+ margin-bottom: 16px;
+}
+.subStationUl li .subStationUlPm{
+	width: 10%;
+	float: left;
+	font-size: 16px;
+	color: #485a6a;
+}
+.subStationUl li .subStationUlPm i{
+	display: block;
+	margin-left: 10px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	text-align: center;
+	height: 20px;
+	font-style:normal
+}
+.subStationUl li:nth-child(1) .subStationUlPm i{
+	color: #fff;
+	background: #f36a5a;
+}
+.subStationUl li:nth-child(2) .subStationUlPm i{
+	color: #fff;
+	background: #5b9bd1;
+}
+.subStationUl li:nth-child(3) .subStationUlPm i{
+	color: #fff;
+	background: #4db3a4;
+}
+.subStationUl li .subStationUlName{
+	width: 27%;
+	float: left;
+	display: block;
+	font-size: 16px;
+	color: #485a6a;
+	line-height: 20px;
+	white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.subStationUl li .subStationUlNum{
+	width: 63%;
+	height: 20px;
+	float: left;
+}
+.subStationUl li .subStationUlNum .subStationPercentage{
+	width: 82%;
+	height:14px;
+	border-radius: 0  10px 10px 0;
+	border:1px solid #deeaf5;
+	float: left;
+	margin-right: 8px;
+	margin-top: 3px;
+	box-sizing: border-box;
+}
+.subStationUl li .subStationUlNum .subStationPercentage p{
+	height: 100%;
+	background: #bdd7ed;
+	border-radius: 0  10px 10px 0;
+}
+.subStationUl li .subStationUlNum span{
+	line-height: 20px;
+	font-size: 16px;
+	color: #5b9bd0;
+}
+.regionBox{
+	margin-top: 16px;
+	overflow: hidden;
+	width: 100%;
+	float: left;
+	height: 396px;
+}
+.regionBox #regionChart{
+	width: 63%;
+	float: left;
+	height: 396px;
+}
+.regionUlBox{
+	width: 35%;
+	float: right;
+}
+
+
+.regionUlBox .subStationHeader{
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 12px;
+}
+.regionUlBox .subStationHeader span:nth-child(1){
+	width: 22%;
+	float: left;
+	font-size: 18px;
+	color: #7894ac;
+	box-sizing: border-box;
+	padding-left: 3px;
+}
+.regionUlBox .subStationHeader span:nth-child(2){
+	width: 22%;
+	float: left;
+	font-size: 18px;
+	color: #7894ac;
+	box-sizing: border-box;
+}
+.regionUlBox .subStationHeader span:nth-child(3){
+	width: 56%;
+	float: left;
+	font-size: 18px;
+	color: #7894ac;
+	box-sizing: border-box;
+	padding-left: 0;
+}
+.regionUlBox .subStationUl{
+	
+}
+.regionUlBox .subStationUl li{
+	box-sizing: border-box;
+    height: 36px;
+    margin-bottom: 0;
+}
+.regionUlBox .subStationUl li .subStationUlPm{
+	width: 22%;
+	float: left;
+	font-size: 16px;
+	color: #485a6a;
+	padding:5px 0 ;
+	height: 26px;
+}
+.regionUlBox .subStationUl li .subStationUlPm i{
+	display: block;
+	margin-left: 10px;
+	width: 20px;
+	height: 20px;
+	margin-top: 3px;
+	border-radius: 50%;
+	text-align: center;
+	height: 20px;
+	font-style:normal;
+}
+.regionUlBox .subStationUl li:nth-child(1) .subStationUlPm i{
+	color: #fff;
+	background: #f36a5a;
+}
+.regionUlBox .subStationUl li:nth-child(2) .subStationUlPm i{
+	color: #fff;
+	background: #5b9bd1;
+}
+.regionUlBox .subStationUl li:nth-child(3) .subStationUlPm i{
+	color: #fff;
+	background: #4db3a4;
+}
+.regionUlBox .subStationUl li .subStationUlName{
+	width: 22%;
+	float: left;
+	display: block;
+	font-size: 16px;
+	color: #485a6a;
+	line-height: 26px;
+	white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    padding:5px 0 ;
+}
+.regionUlBox .subStationUl li .subStationUlNum{
+	width: 56%;
+	height: 36px;
+	float: left;
+	padding:5px 0;
+	border-left: 1px solid #ededed;
+	box-sizing: border-box;
+}
+.regionUlBox .subStationUl li .subStationUlNum .subStationPercentage{
+	width: 42%;
+	height:26px;
+	border-radius: 0;
+	border:0;
+	float: left;
+	margin-right: 3px;
+	margin-top: 0px;
+	box-sizing: border-box;
+}
+.regionUlBox .subStationUl li .subStationUlNum .subStationPercentage p{
+	height: 100%;
+	background: #bdd7ed;
+	border-radius: 00;
+}
+.regionUlBox .subStationUl li .subStationUlNum span{
+	line-height: 20px;
+	font-size: 14px;
+	color: #5b9bd0;
+}
+.posire{
+	position: relative;
+}
+.posire img{
+     position: absolute;
+	 width: 50%;
+	 left:50%;
+	 top:55%;
+	 margin-left: -25%;
+	margin-top: -27.5%;
+	opacity: 0;
+	transition: 1s;
+	-moz-transition: 1s; /* Firefox 4 */
+	-webkit-transition: 1s; /* Safari and Chrome */
+	-o-transition: 1s; /* Opera */
+	-o-transition: 1s; /* Opera */
+}
+.posire .PieChartTime{
+	position: absolute;
+	width: 200px;
+	height: 28px;
+	border:1px solid #e9ecf3;
+	border-radius: 3px;
+	background: #f4f6fc;
+	right: 20px;
+	top: 15%;
+	z-index: 10;
+    color: #8e9daa;
+	font-size: 12px;
+}
+.posire .PieChartTime img{
+	position: absolute;
+	right: 9px;
+	top: 7px;
+}
+.posire .PieChartTime input{
+	width: 70px;
+	padding:0 5px;
+	height:28px;
+	line-height:28px;
+	color: #8e9daa;
+	outline: none;
+	font-size: 12px;
+	border: 0;
+	background: none;
+}
+.posir2 .PieChartTime{
+	top: 10px;
+}
+.glfooter{
+	height: 35px;
+	background: #d4d8e1;
+	border-top:20px solid #e9ecf3;
+	line-height:35px ;
+}
+.glfooter ul{
+	margin-left: 30%;
+	overflow: hidden;
+	float: left;
+}
+.glfooter ul li{
+	float: left;
+}
+.glfooter ul li{
+	width: 64px;
+	text-align: center;
+	line-height: 35px;
+}
+.glfooter ul li a{
+	font-size: 14px;
+	color: #939db4;
+}
+.glfooter p{
+	line-height: 35px;
+	color: #939db4;
+	font-size: 12px;
+	float: right;
+	margin-right: 15%;
+}
+
+@media screen and (max-width:1440px) {
+	.regionUlBox .subStationUl li .subStationUlNum span{
+		font-size: 12px !important;
+	}
+	.regionUlBox .subStationUl li .subStationUlNum .subStationPercentage {
+		width: 37%;
+	}
+	.glCRTUl li .indexLiAbtn {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		height: 28px;
+		line-height: 28px;
+		background: #9dcbe6;
+		border-radius: 5px;
+		padding: 0 9px;
+		color: #fff;
+		font-size: 12px;
+	}
+	.glCRTUl li .glCRTUlLiTitle {
+		font-size: 13px;
+	}
+	.glCRTUl li {
+	    height: 125px;
+	    width: 23.5%;
+	    margin-right: 2%;
+	    background: #fff;
+	    float: left;
+	    box-sizing: border-box;
+	    padding: 12px 0px 15px 15px;
+	}
+	.glCRTUl li .glCRTUlLiTitle {
+	    margin-bottom: 10px;
+	}
+	.subStationHeader span{
+		font-size: 16px !important;
+	}
+	.regionUlBox .subStationHeader span{
+		font-size: 16px !important;
+	}
+	.subStationUl li .subStationUlName {
+	    font-size: 14px;
+	}
+	.subStationUl li .subStationUlNum span {
+	    font-size: 14px;
+	}
+	.regionUlBox .subStationUl li .subStationUlNum span {
+	    font-size: 12px;
+	}
+	.regionUlBox .subStationUl li .subStationUlName {
+	    font-size: 14px;
+	    }
+	 .glCRTitle {
+	    color: #485a6a;
+	    font-size: 18px;
+	    height: 54px;
+	    border-bottom: 1px solid #eef1f5;
+	    line-height: 62px;
+	}
+	.reminderUlHeader span {
+    display: block;
+    font-size: 16px;
+    color: #7894ac;
+}
+.reminderUl li a {
+    float: left;
+    display: block;
+    font-size: 14px;
+}
+.reminderUl li span{
+	font-size: 14px;
+	}
+.posire .PieChartTime{
+	top: 18%;
+	}
+}
+@media screen and (max-width:1366px) {
+	.glCRTUl li .glCRTUlLiTitle {
+		font-size: 12px;
+	}
+	.glCRTUl li .indexLiAbtn {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		height: 26px;
+		line-height: 26px;
+		background: #9dcbe6;
+		border-radius: 5px;
+		padding: 0 6px;
+		color: #fff;
+		font-size: 12px;
+	}
+	.regionUlBox .subStationUl li .subStationUlNum span {
+		font-size: 12px !important;
+	}
+}
