@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eprobj.dao.JSXYMapper">
+    <select id="newsList" resultType="com.eprobj.entity.JSXY" parameterType="com.eprobj.entity.JSXY">
+        SELECT id IR_HKEY,name IR_URLTITLE,publish IR_SITENAME,subject IR_URLTIME,usernum IR_GROUPNAME FROM  jsxy
+        WHERE
+        1 = 1
+        <if test="IR_URLTITLE!=null and IR_URLTITLE!=''">
+            and name like concat('%',#{IR_URLTITLE,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="IR_SITENAME!=null and IR_SITENAME!=''">
+            and publish like concat('%',#{IR_SITENAME,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="IR_URLTIME!=null and IR_URLTIME!=''">
+            and subject like concat('%',#{IR_URLTIME,jdbcType=VARCHAR},'%')
+        </if>
+        order by IR_URLTIME desc
+        limit #{page,jdbcType=INTEGER},#{limit,jdbcType=INTEGER}
+    </select>
+
+    <select id="newsCount" resultType="int" parameterType="com.eprobj.entity.JSXY">
+        SELECT count(*) FROM  jsxy
+        WHERE
+        1 = 1
+        <if test="IR_URLTITLE!=null and IR_URLTITLE!=''">
+            and name like concat('%',#{IR_URLTITLE,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="IR_SITENAME!=null and IR_SITENAME!=''">
+            and publish like concat('%',#{IR_SITENAME,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="IR_SITENAME!=null and IR_SITENAME!=''">
+            and subject like concat('%',#{IR_URLTIME,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="IR_GROUPNAME!=null and IR_GROUPNAME!=''">
+            and usernum >= ${IR_GROUPNAME,jdbcType=VARCHAR}
+        </if>
+    </select>
+
+    <delete id="deleteNews" parameterType="java.util.List">
+        delete from
+        jsxy
+        where
+        id in
+        <foreach collection="newsIds" item="item" index="index" separator="," open="(" close=")">
+            #{item}
+        </foreach>
+    </delete>
+
+
+    <select id="areaList" resultType="String" >
+    select IR_GROUPNAME from urlcontent GROUP BY IR_GROUPNAME;
+    </select>
+
+
+    <select id="newsGYears" resultType="String" >
+      select year(IR_URLTIME) years from urlcontent GROUP BY years ORDER BY years DESC
+    </select>
+
+    <select id="newsAnalyse" resultType="map" >
+      select IR_GROUPNAME,count(*) num,year(IR_URLTIME) years from urlcontent WHERE year(IR_URLTIME)= #{param.year} GROUP BY IR_GROUPNAME,years ORDER BY num DESC
+    </select>
+
+</mapper>
