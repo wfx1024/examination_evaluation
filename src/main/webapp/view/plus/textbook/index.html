@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>全国大中小教材数据库</title>
-    <base th:href="${#request.getContextPath()}+'/'">
-    <link rel="stylesheet" href="static/layuiadmin/layui/css/layui.css">
+    <link rel="stylesheet" href="/kspj/static/layuiadmin/layui/css/layui.css">
 </head>
 <body>
 
@@ -68,13 +67,11 @@
         </div>
     </div>
 </div>
-<script th:src="@{static/layuiadmin/layui/layui.js}"></script>
-<script>
-    const baseUrl = "[[${#servletContext.contextPath}]]";
-</script>
-<script th:inline="none">
+<script src="/kspj/static/layuiadmin/layui/layui.js"></script>
+
+<script >
 layui.config({
-    base: baseUrl + '/static/layuiadmin/'  //静态资源所在路径
+    base:  '/kspj/static/layuiadmin/'  //静态资源所在路径
 }).extend({
     index: 'lib/index'  //主模块入口
 }).use(['layer','index','form','table','laydate'], function () {
@@ -100,7 +97,7 @@ layui.config({
 //用户列表
     table.render({
         elem: '#tbl-book-list'
-        ,url: baseUrl + '/textbook/list-page'
+        ,url: '/kspj/textbook/list-page'
         ,where: queryParams
         ,cols: [
             [
@@ -153,7 +150,7 @@ layui.config({
                     type: "POST",
                     timeout: 5000,
                     dataType: "json",
-                    url: baseUrl + '/textbook/delete',
+                    url: '/kspj/textbook/delete',
                     data: {"ids":ids},
                     success: function(d){
                         if(d.code=="0"){
@@ -176,7 +173,7 @@ layui.config({
             var frame = layer.open({
                 type: 2
                 ,title: '查看'
-                ,content:  baseUrl + '/textbook/toEdit'
+                ,content:   '/kspj/textbook/toEdit'
                 ,maxmin: true
                 ,area: ['50%', '50%']
                 ,btn: ['确定', '取消']
@@ -201,7 +198,7 @@ layui.config({
                     type: "POST",
                     timeout: 5000,
                     dataType: "json",
-                    url: baseUrl +  "/textbook/delete",
+                    url:   "/kspj/textbook/delete",
                     data: {"ids":ids},
                     success: function(d){
                         if(d.code=="0"){
@@ -223,7 +220,7 @@ layui.config({
             var frame = layer.open({
                 type: 2
                 ,title: '查看'
-                ,content:  baseUrl + '/textbook/toEdit?id=' + data.id
+                ,content:   '/kspj/textbook/toEdit?id=' + data.id
                 ,maxmin: true
                 ,area: ['50%', '50%']
                 ,btn: ['确定', '取消']
@@ -267,7 +264,7 @@ layui.config({
             type: "POST",
             // timeout: 3000,
             dataType: "json",
-            url:baseUrl + "/textbook/type",
+            url: "/kspj/textbook/type",
             data: params,
             success: function(d){
                 if(d.code=="0"){
@@ -291,7 +288,7 @@ layui.config({
             type: "POST",
             // timeout: 3000,
             dataType: "json",
-            url: baseUrl +  "/textbook/language",
+            url:   "/kspj/textbook/language",
             data: params,
             success: function(d){
                 if(d.code=="0"){

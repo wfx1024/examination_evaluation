@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>修改</title>
-    <base th:href="${#request.getContextPath()}+'/'">
-    <link rel="stylesheet" href="static/layuiadmin/layui/css/layui.css" media="all">
+
+    <link rel="stylesheet" href="/kspj/static/layuiadmin/layui/css/layui.css" media="all">
 </head>
 <body>
 <div class="overViewPage">
@@ -16,19 +16,19 @@
                 <div class="layui-inline newly_adress">
                     <label class="layui-form-label">教材名称</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="name" id="name" autocomplete="off" class="layui-input" lay-verify="name" th:value="${textbook?.name}">
+                        <input type="text" name="name" id="name" autocomplete="off" class="layui-input" lay-verify="name" value="英语六年级上册2">
                     </div>
                 </div>
                 <div class="layui-inline newly_adress">
                     <label class="layui-form-label">出版单位</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="publisher" id="publisher" autocomplete="off" class="layui-input" lay-verify="publisher" th:value="${textbook?.publisher}">
+                        <input type="text" name="publisher" id="publisher" autocomplete="off" class="layui-input" lay-verify="publisher" value="湖南少年儿童出版社有限责任公司">
                     </div>
                 </div>
                 <div class="layui-inline newly_adress">
                     <label class="layui-form-label">书号</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="isbn" id="isbn" autocomplete="off" class="layui-input" lay-verify="isbn" th:value="${textbook?.isbn}">
+                        <input type="text" name="isbn" id="isbn" autocomplete="off" class="layui-input" lay-verify="isbn" value="9787556202867">
                     </div>
                 </div>
             </div>
@@ -36,31 +36,31 @@
                 <div class="layui-inline">
                     <label class="layui-form-label">版次</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="edition" id="edition" autocomplete="off" class="layui-input" th:value="${textbook?.edition}">
+                        <input type="text" name="edition" id="edition" autocomplete="off" class="layui-input" value="第二版">
                     </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label">版次日期</label>
                     <div class="layui-input-inline">
-                        <input type="text" class="layui-input" id="editionDate" name="editionDate" th:value="${textbook?.editionDate}" placeholder="yyyy-MM">
+                        <input type="text" class="layui-input" id="editionDate" name="editionDate" value="2019-06" placeholder="yyyy-MM">
                     </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label">再版书第1版版次书名</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="nameBack" id="nameBack" autocomplete="off" class="layui-input" th:value="${textbook?.nameBack}">
+                        <input type="text" name="nameBack" id="nameBack" autocomplete="off" class="layui-input" value="英语六年级上册">
                     </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label">再版书第1版版次书号</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="isbnBack" id="isbnBack" autocomplete="off" class="layui-input" th:value="${textbook?.isbnBack}">
+                        <input type="text" name="isbnBack" id="isbnBack" autocomplete="off" class="layui-input" value="">
                     </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label">再版书第1版版次日期</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="editionBack" id="editionBack" autocomplete="off" placeholder="yyyy-MM" class="layui-input" th:value="${textbook?.editionBack}">
+                        <input type="text" name="editionBack" id="editionBack" autocomplete="off" placeholder="yyyy-MM" class="layui-input" value="2014-08">
                     </div>
                 </div>
                 <div class="layui-inline">
@@ -129,8 +129,8 @@
                     <div class="layui-input-inline">
                         <select id="isCollege" name="isCollege">
                             <option value="">请选择</option>
-                            <option value="是" th:selected="${textbook?.isCollege=='是'}">是</option>
-                            <option value="否" th:selected="${textbook?.isCollege=='否'}">否</option>
+                            <option value="是"  selected>是</option>
+                            <option value="否" >否</option>
                         </select>
                     </div>
                 </div>
@@ -139,25 +139,25 @@
                 <div class="layui-inline">
                     <label class="layui-form-label">主要作者</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="author1" id="author1" autocomplete="off"  class="layui-input" th:value="${textbook?.author1}" >
+                        <input type="text" name="author1" id="author1" autocomplete="off"  class="layui-input" value="白解红" >
                     </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label">著作方式</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="authorMode1" id="authorMode1" autocomplete="off"  class="layui-input" th:value="${textbook?.authorMode1}" >
+                        <input type="text" name="authorMode1" id="authorMode1" autocomplete="off"  class="layui-input" value="分册主编" >
                     </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label">作者单位</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="authorUnit1" id="authorUnit1" autocomplete="off"  class="layui-input" th:value="${textbook?.authorUnit1}" >
+                        <input type="text" name="authorUnit1" id="authorUnit1" autocomplete="off"  class="layui-input" th:value="湖南师范大学" >
                     </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label">国籍</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="authorNationality1" id="authorNationality1" autocomplete="off"  class="layui-input" th:value="${textbook?.authorNationality1}" >
+                        <input type="text" name="authorNationality1" id="authorNationality1" autocomplete="off"  class="layui-input" th:value="中国" >
                     </div>
                 </div>
             </div>
@@ -165,25 +165,25 @@
                 <div class="layui-inline">
                     <label class="layui-form-label">国家级立项情况</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="projectSituation" id="projectSituation" autocomplete="off"  class="layui-input" th:value="${textbook?.projectSituation}" >
+                        <input type="text" name="projectSituation" id="projectSituation" autocomplete="off"  class="layui-input" value="无" >
                     </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label">其他立项情况</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="otherSituation" id="otherSituation" autocomplete="off"  class="layui-input" th:value="${textbook?.otherSituation}" >
+                        <input type="text" name="otherSituation" id="otherSituation" autocomplete="off"  class="layui-input" value="无" >
                     </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label">国家级获奖情况</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="prizeSituation" id="prizeSituation" autocomplete="off"  class="layui-input" th:value="${textbook?.prizeSituation}" >
+                        <input type="text" name="prizeSituation" id="prizeSituation" autocomplete="off"  class="layui-input" value="无" >
                     </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label">其他获奖情况</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="otherPrizeSituation" id="otherPrizeSituation" autocomplete="off"  class="layui-input" th:value="${textbook?.otherPrizeSituation}" >
+                        <input type="text" name="otherPrizeSituation" id="otherPrizeSituation" autocomplete="off"  class="layui-input" value="无" >
                     </div>
                 </div>
             </div>
@@ -192,7 +192,7 @@
                     <label class="layui-form-label">封面</label>
                     <div class="layui-input-inline layui-upload">
                         <div class="imgList layui-upload-list layui-inline">
-                            <p class='uploadItemImg imgDelete'  ><img th:src="@{${textbook?.coverImage}}"><i></i></p>
+                            <p class='uploadItemImg imgDelete'  ><img width="50px" src="http://127.0.0.1:8080/kspj/static/file/9787107291036 fm.jpg"><i></i></p>
                         </div>
                         <a href="javascript:void(0)" class="uploadimg">
                             <input type="file" id="file" multiple="multiple"/>
@@ -203,7 +203,7 @@
                     <label class="layui-form-label">版权页</label>
                     <div class="layui-input-inline layui-upload">
                         <div class="imgList layui-upload-list layui-inline">
-                            <p class='uploadItemImg imgDelete'  ><img  th:src="@{${textbook?.copyrightImage}}"><i></i></p>
+                            <p class='uploadItemImg imgDelete'  ><img width="50px"  src="http://127.0.0.1:8080/kspj/static/file/9787107291036 bqy.jpg"><i></i></p>
                         </div>
                         <a href="javascript:void(0)" class="uploadimg">
                             <input type="file" id="file2" multiple="multiple"/>
@@ -219,13 +219,11 @@
     </div>
 </div>
 
-<script th:src="@{static/layuiadmin/layui/layui.js}"></script>
-<script>
-    const baseUrl = "[[${#servletContext.contextPath}]]";
-</script>
+    <script src="http://127.0.0.1:8080/kspj/static/layuiadmin/layui/layui.js"></script>
+
 <script>
     layui.config({
-        base: baseUrl + '/static/layuiadmin/'  //静态资源所在路径
+        base: '/kspj/static/layuiadmin/'  //静态资源所在路径
     }).extend({
         index: 'lib/index'  //主模块入口
     }).use(['layer','index','form','table','laydate'], function () {
@@ -248,7 +246,7 @@
                 type: "POST",
                 timeout: 5000,
                 dataType: "json",
-                url: baseUrl +  "/textbook/save",
+                url: "/kspj/textbook/save",
                 data: field,
                 success: function (d) {
                     if(d.code=="0"){
@@ -313,12 +311,12 @@
         });
 
         /*<![CDATA[*/
-        var textbookType1 ="[[${textbook?.textbookType1}]]";
-        var textbookType2 ="[[${textbook?.textbookType2}]]";
-        var textbookType3 ="[[${textbook?.textbookType3}]]";
-        var textbookType4 ="[[${textbook?.textbookType4}]]";
-        var textbookType5 ="[[${textbook?.textbookType5}]]";
-        var language ="[[${textbook?.language}]]";
+        var textbookType1 ="基础教育教材";
+        var textbookType2 ="国家课程教材";
+        var textbookType3 ="义务教育";
+        var textbookType4 ="外语";
+        var textbookType5 ="无";
+        var language ="英语";
         /*]]>*/
 //年月选择器
         laydate.render({
@@ -338,7 +336,7 @@
                 type: "POST",
                 // timeout: 3000,
                 dataType: "json",
-                url:baseUrl + "/textbook/type",
+                url:"/kspj/textbook/type",
                 data: params,
                 success: function(d){
                     if(d.code=="0"){
@@ -392,7 +390,7 @@
                 type: "POST",
                 // timeout: 3000,
                 dataType: "json",
-                url: baseUrl +  "/textbook/language",
+                url: "/kspj/textbook/language",
                 data: params,
                 success: function(d){
                     if(d.code=="0"){
