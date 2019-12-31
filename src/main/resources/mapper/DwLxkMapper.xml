@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eprobj.dao.DwLxkMapper">
+    <select id="newsList" resultType="com.eprobj.entity.BookOrgLocal" parameterType="com.eprobj.entity.BookOrgLocal">
+        SELECT id,dwmc,callman,cel,email,region FROM  cbsxx
+        WHERE
+        1 = 1
+        <if test="dwmc!=null and dwmc!=''">
+            and dwmc like concat('%',#{dwmc,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="callman!=null and callman!=''">
+            and callman like concat('%',#{callman,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="cel!=null and cel!=''">
+            and cel like concat('%',#{cel,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="email!=null and email!=''">
+            and email like concat('%',#{email,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="region!=null and region!=''">
+            and region like concat('%',#{region,jdbcType=VARCHAR},'%')
+        </if>
+        order by id desc
+        limit #{page,jdbcType=INTEGER},#{limit,jdbcType=INTEGER}
+    </select>
+    <delete id="delete" parameterType="java.util.List">
+        delete from cbsxx where id IN
+        <foreach collection="newsIds" item="item" index="index" separator="," open="(" close=")">
+            #{item}
+        </foreach>
+    </delete>
+    <update id="updatedw" parameterType="com.eprobj.entity.BookOrgLocal">
+        update cbsxx
+        set
+        <if test="dwmc!=null and dwmc!=''">
+             dwmc = #{dwmc,jdbcType=VARCHAR}
+        </if>
+        <if test="callman!=null and callman!=''">
+            and callman= #{callman,jdbcType=VARCHAR}
+        </if>
+        <if test="cel!=null and cel!=''">
+            and cel = d#{cel,jdbcType=VARCHAR}
+        </if>
+        <if test="email!=null and email!=''">
+            and email = #{email,jdbcType=VARCHAR}
+        </if>
+        <if test="region!=null and region!=''">
+            and region = #{region,jdbcType=VARCHAR}
+        </if>
+        where id = #{region,jdbcType=INTEGER}
+    </update>
+
+    <select id="countAll" resultType="int">
+        select COUNT(*) from cbsxx;
+    </select>
+
+</mapper>
