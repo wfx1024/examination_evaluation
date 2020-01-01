@@ -31,15 +31,16 @@ public class ExpertController {
             return RespUtil.getResp(RespUtil.RESP_CODE_SUCCESS, "查询成功！", null);
         }
         if ("IR_ESUBJECT".equals(leibie)){
-            System.out.println("-----------------------------IR_ESUBJECT-----------");
             List<Map> newsAnalyseList  = iExpertService.expertSubject();
-            System.out.println(newsAnalyseList+"------------IR_ESUBJECT");
             return RespUtil.getResp(RespUtil.RESP_CODE_SUCCESS, "查询成功！", newsAnalyseList);
-
         }else if("IR_EPROVINCE".equals(leibie)){
-            System.out.println("--------------------IR_EPROVINCE-----------------------");
             List<Map> newsAnalyseList1  = iExpertService.expertSubject1();
-            System.out.println(newsAnalyseList1+"------------IR_EPROVINCE");
+            return RespUtil.getResp(RespUtil.RESP_CODE_SUCCESS, "查询成功！", newsAnalyseList1);
+        }else if("IR_ETERRITORY".equals(leibie)){
+            List<Map> newsAnalyseList1  = iExpertService.expertSubject2();
+            return RespUtil.getResp(RespUtil.RESP_CODE_SUCCESS, "查询成功！", newsAnalyseList1);
+        }else if("IR_EUNITCATEGORY".equals(leibie)){
+            List<Map> newsAnalyseList1  = iExpertService.expertSubject3();
             return RespUtil.getResp(RespUtil.RESP_CODE_SUCCESS, "查询成功！", newsAnalyseList1);
         }
 

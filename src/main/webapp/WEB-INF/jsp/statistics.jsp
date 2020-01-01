@@ -32,6 +32,8 @@
                             <option value="">请选择类别</option>
                             <option value="IR_ESUBJECT" selected>学科</option>
                             <option value="IR_EPROVINCE">地区</option>
+                            <option value="IR_ETERRITORY">领域</option>
+                            <option value="IR_EUNITCATEGORY">单位类别</option>
                         </select>
                     </div>
                 </div>

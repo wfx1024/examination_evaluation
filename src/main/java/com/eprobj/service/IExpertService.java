@@ -16,5 +16,7 @@ public interface IExpertService {
 
     List<Map> expertSubject();
     List<Map> expertSubject1();
+    List<Map> expertSubject2();
+    List<Map> expertSubject3();
 
 }

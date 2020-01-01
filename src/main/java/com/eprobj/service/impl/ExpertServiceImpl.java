@@ -58,5 +58,15 @@ public class ExpertServiceImpl implements IExpertService {
         return expertMapper.expertSubject1();
     }
 
+    @Override
+    public List<Map> expertSubject2() {
+        return expertMapper.expertSubject2();
+    }
+
+    @Override
+    public List<Map> expertSubject3() {
+        return expertMapper.expertSubject3();
+    }
+
 
 }

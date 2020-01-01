@@ -101,6 +101,12 @@
     <select id="expertSubject1" resultType="map" >
         select IR_EPROVINCE name ,count(*) value from urlexpert  GROUP BY IR_EPROVINCE
     </select>
+    <select id="expertSubject2" resultType="map" >
+        select IR_ETERRITORY name ,count(*) value from urlexpert  GROUP BY IR_ETERRITORY
+    </select>
+    <select id="expertSubject3" resultType="map" >
+        select IR_EUNITCATEGORY name ,count(*) value from urlexpert  GROUP BY IR_EUNITCATEGORY
+    </select>
 
 
 
