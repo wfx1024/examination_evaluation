@@ -56,6 +56,7 @@
             <div style="padding-bottom: 10px;">
                 <button class="layui-btn layuiadmin-btn-list" data-type="batchdel">删除</button>
                 <button class="layui-btn layui-btn-warm newadd" data-type="batchde2">新建</button>
+                <button class="layui-btn layui-btn-normal newsend" data-type="batchde3">发送消息</button>
             </div>
             <table id="tbl-news-list" lay-filter="tbl-news-list"></table>
             <script type="text/html" id="toolbar-news-list">
@@ -269,6 +270,20 @@ layui.config({
                 layer.close(frame);
             }
             });
+        },
+        batchde3:function(){
+            var frame = layer.open({
+                type: 2
+                ,title: '发送消息'
+                ,content:  '<%=path%>/dwlxk/senedmessage'
+                ,maxmin: true
+                ,area: ['500px', '400px']
+                ,btn: ['确定', '取消']
+                ,yes: function(index, layero){
+                    layer.msg("发送成功");
+                    layer.close(frame);
+                }
+            });
         }
     };
 
@@ -277,6 +292,10 @@ layui.config({
         active[type] ? active[type].call(this) : '';
     });
     $('.newadd').on('click', function(){
+        var type = $(this).data('type');
+        active[type] ? active[type].call(this) : '';
+    });
+    $('.newsend').on('click', function(){
         var type = $(this).data('type');
         active[type] ? active[type].call(this) : '';
     });
