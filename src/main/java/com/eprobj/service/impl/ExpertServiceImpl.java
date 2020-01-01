@@ -48,5 +48,25 @@ public class ExpertServiceImpl implements IExpertService {
         return expertMapper.deleteExpert(expertIDs);
     }
 
+    @Override
+    public List<Map> expertSubject() {
+        return expertMapper.expertSubject();
+    }
+
+    @Override
+    public List<Map> expertSubject1() {
+        return expertMapper.expertSubject1();
+    }
+
+    @Override
+    public List<Map> expertSubject2() {
+        return expertMapper.expertSubject2();
+    }
+
+    @Override
+    public List<Map> expertSubject3() {
+        return expertMapper.expertSubject3();
+    }
+
 
 }

@@ -116,4 +116,23 @@ public class TextbookController {
         }
     }
 
+    @RequestMapping("/toStat")
+    public ModelAndView toStat() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("/textbook/stat");
+        mav.addObject("type",1);
+       return mav;
+    }
+
+    @RequestMapping("/stat")
+    @ResponseBody
+    public Object stat(HttpServletRequest request) {
+        String type = request.getParameter("type");
+        if (!StringUtils.isNotBlank(type)) {
+            type = "1";
+        }
+        List<Map<String,Object>> mapList = textbookService.statByType(type);
+        return RespUtil.getResp(RespUtil.RESP_CODE_SUCCESS, "成功保存", mapList);
+    }
+
 }

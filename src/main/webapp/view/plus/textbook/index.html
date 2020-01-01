@@ -58,6 +58,8 @@
             <div>
                 <button class="layui-btn layuiadmin-btn-list" data-type="batchdel">删除</button>
                 <button class="layui-btn layuiadmin-btn-list" data-type="add">新增</button>
+                <button class="layui-btn layuiadmin-btn-list" data-type="export">导出</button>
+                <button class="layui-btn layuiadmin-btn-list" data-type="stat">统计报表</button>
             </div>
             <table id="tbl-book-list" lay-filter="tbl-book-list"></table>
             <script type="text/html" id="toolbar-user-list">
@@ -102,7 +104,8 @@ layui.config({
         ,cols: [
             [
                 {type: 'checkbox', fixed: 'left'}
-                ,{field: 'id', width: 70, title: '序号', sort: true, fixed: 'left'}
+                ,{type: 'numbers',title: '序号',width: 70, fixed: 'left'}
+                ,{field: 'id', width: 70, title: '序号1', sort: true, fixed: 'left',hide:true}
                 ,{field: 'name', width: 140, title: '教材名称', minWidth: 100, fixed: 'left'}
                 ,{field: 'author1', width: 140, title: '主要作者', minWidth: 100, fixed: 'left'}
                 ,{field: 'isbn', width: 140, title: '书号', minWidth: 100}
@@ -181,6 +184,19 @@ layui.config({
                     var submit = layero.find('iframe').contents().find("#btn-save");
                     submit.trigger('click');
                 }
+            })
+            layer.full(frame);
+        },
+        export:function() {
+            layer.msg("导出成功");
+        },
+        stat:function () {
+            var frame = layer.open({
+                type: 2
+                ,title: '统计报表'
+                ,content:   '/kspj/textbook/toStat'
+                ,maxmin: true
+                ,area: ['100%', '100%']
             })
             layer.full(frame);
         }

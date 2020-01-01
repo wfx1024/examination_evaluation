@@ -32,4 +32,6 @@ public interface TextbookMapper {
 
     int updateById(Textbook textbook);
 
+    List<Map<String,Object>> statByType(@Param("type") String type);
+
 }

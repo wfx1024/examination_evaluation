@@ -3,20 +3,52 @@ package com.eprobj.controller;
 import com.eprobj.entity.Expert;
 import com.eprobj.entity.NEWS;
 import com.eprobj.service.IExpertService;
+import com.eprobj.service.impl.ExpertServiceImpl;
 import com.eprobj.util.RespUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/experts")
 public class ExpertController {
     @Autowired
-    private IExpertService iExpertService;
+    public  IExpertService iExpertService;
+
+    //统计所选的类别统计图
+    @RequestMapping("/parm")
+    @ResponseBody
+    public String searchList(@RequestParam(value="leibie") String leibie){
+
+        if (StringUtils.isBlank(leibie)){
+            return RespUtil.getResp(RespUtil.RESP_CODE_SUCCESS, "查询成功！", null);
+        }
+        if ("IR_ESUBJECT".equals(leibie)){
+            List<Map> newsAnalyseList  = iExpertService.expertSubject();
+            return RespUtil.getResp(RespUtil.RESP_CODE_SUCCESS, "查询成功！", newsAnalyseList);
+        }else if("IR_EPROVINCE".equals(leibie)){
+            List<Map> newsAnalyseList1  = iExpertService.expertSubject1();
+            return RespUtil.getResp(RespUtil.RESP_CODE_SUCCESS, "查询成功！", newsAnalyseList1);
+        }else if("IR_ETERRITORY".equals(leibie)){
+            List<Map> newsAnalyseList1  = iExpertService.expertSubject2();
+            return RespUtil.getResp(RespUtil.RESP_CODE_SUCCESS, "查询成功！", newsAnalyseList1);
+        }else if("IR_EUNITCATEGORY".equals(leibie)){
+            List<Map> newsAnalyseList1  = iExpertService.expertSubject3();
+            return RespUtil.getResp(RespUtil.RESP_CODE_SUCCESS, "查询成功！", newsAnalyseList1);
+        }
+
+        return RespUtil.getResp(RespUtil.RESP_CODE_ERROR, "查询失败！", null);
+//        Map param = new HashMap();
+//        param.put("leibie", leibie);
+    }
+
 
 
     @RequestMapping("/list")

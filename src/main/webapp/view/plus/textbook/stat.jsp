@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<jsp:include page="common/bootHead.jsp">
+<jsp:include page="../../../WEB-INF/jsp/common/bootHead.jsp">
     <jsp:param name="title" value="改革动态分析"/>
 </jsp:include>
 </head>
@@ -26,10 +26,12 @@
         <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="form-search">
             <div class="layui-form-item">
                 <div class="layui-inline">
-                    <label class="layui-form-label">年份</label>
+                    <label class="layui-form-label">统计依据</label>
                     <div class="layui-input-inline">
-                        <select id="year" name="year">
+                        <select id="type" name="type">
                             <option value="">请选择</option>
+                            <option value="1" <c:if  test="${type == 1}">selected</c:if> >语种</option>
+                            <option value="2"  <c:if  test="${type == 2}">selected</c:if> >分类</option>
                         </select>
                     </div>
                 </div>
@@ -49,7 +51,7 @@
     </div>
 </div>
 
-<jsp:include page="common/bootFoot.jsp"></jsp:include>
+<jsp:include page="../../../WEB-INF/jsp/common/bootFoot.jsp"></jsp:include>
 <script>
 layui.config({
     base: '<%=path%>/static/layuiadmin/' //静态资源所在路径
@@ -61,20 +63,20 @@ layui.config({
         ,form = layui.form
         ,table = layui.table
         ,laydate = layui.laydate;
+
     //查询参数
-    var year = ${years[0]};
+    var year = '2019';
     var queryParams = {
         "year" : year
     };
     //列表
     table.render({
         elem: '#tbl-news-list'
-        ,url: '<%=path%>/analyse/list'
+        ,url: '<%=path%>/textbook/stat'
         ,where: queryParams
         ,cols: [[
-            ,{field: 'IR_GROUPNAME', width: 400, title: '地域'}
-            ,{field: 'num', width: 200, title: '数量',sort: true}
-            ,{field: 'years', width: 200, title: '发布年份',sort: true}
+            ,{field: 'value',  title: '数量',sort: true}
+            ,{field: 'name',  title: '语种/分类',sort: true}
         ]]
         ,text: {
             none: '未查询到匹配的记录' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
@@ -89,59 +91,54 @@ layui.config({
                     if(i==0){
                         year.push(data[i].years+"年");
                     }
-                    area.push(data[i].IR_GROUPNAME);
-                    num.push(data[i].num);
+                    area.push(data[i].name);
+                    num.push(data[i].value);
                 }
-                drawLine(year,area,num);
+                drawLine(year,area,data);
             }
         }
     });
 
-function drawLine(year,area,lastdata) {
+function drawLine(year,area,data) {
     var dom = document.getElementById("container");
     //dom.innerHTML="";
     var myChart = echarts.init(dom);
     var app = {};
     option = null;
-    app.title = '中国各省改革政策数据量';
+    app.title = '全国大中小教材统计';
 
     option = {
-        color: ['#3398DB'],
-        title: {
-            text: '各省改革政策数据量',
+        title : {
+            text: '教材分类数据量',
+            x:'center'
         },
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: {
-                type: 'shadow'
-            }
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
         },
         legend: {
-            data: year
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        xAxis: {
-            type: 'value',
-            boundaryGap: [0, 0.01]
-        },
-        yAxis: {
-            type: 'category',
+            orient: 'vertical',
+            left: 'left',
             data: area
         },
-        series: [
+        series : [
             {
-                name: year[0],
-                type: 'bar',
-                data:lastdata
+                name: '数据量',
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                data:data,
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
             }
         ]
     };
-    ;
+
     if (option && typeof option === "object") {
         myChart.setOption(option, true);
     }
@@ -183,50 +180,15 @@ function drawLine(year,area,lastdata) {
                         if(i==0){
                             year.push(data[i].years+"年");
                         }
-                        area.push(data[i].IR_GROUPNAME);
-                        num.push(data[i].num);
+                        area.push(data[i].name);
+                        num.push(data[i].value);
                     }
-                    drawLine(year,area,num);
+                    drawLine(year,area,data);
                 }
             }
         });
     });
 
-    var initPage = function(){
-        //初始化下拉框
-        var params = {};
-        $.ajax({
-            type: "POST",
-            // timeout: 3000,
-            dataType: "json",
-            url: "<%=path%>/analyse/yearList",
-            data: params,
-            success: function(d){
-                if(d.code=="0"){
-                    var select = $("#year");
-                    $.each(d.data, function (i, v) {
-                        if(i==0){
-                            select.append("<option value='"+v+"' selected>"+v+"</option>");
-                            return true;
-                        }
-                        select.append("<option value='"+v+"'>"+v+"</option>");
-                    });
-                    form.render("select", "form-search");
-                }else{
-                    layer.msg('角色信息获取失败！', {icon: 2});
-                }
-            },
-            error: function(XMLHttpRequest,textStatus,errorThrown){
-                layer.msg('角色信息获取失败！', {icon: 2});
-            },
-            complete: function(){
-            }
-        });
-    }
-
-    $(function(){
-        initPage();
-    });
 
 });
 </script>

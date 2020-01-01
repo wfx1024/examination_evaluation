@@ -72,6 +72,14 @@ public class IndexController {
         modelAndView.setViewName("analyse");
         return modelAndView;
     }
+    @RequestMapping("/statistics")
+    public ModelAndView toStatistics(HttpServletRequest request){
+        ModelAndView modelAndView = new ModelAndView();
+        List searchList = indexService.newsGYears();
+        modelAndView.addObject("years",searchList);
+        modelAndView.setViewName("statistics");
+        return modelAndView;
+    }
 
     @RequestMapping("/arts")
     public ModelAndView toArticle(HttpServletRequest request){

@@ -44,6 +44,7 @@
                     </div>
                 </div>
 
+
                 <div class="layui-inline">
                     <label class="layui-form-label">学科</label>
                     <div class="layui-input-inline">
@@ -61,11 +62,6 @@
                     <button class="layui-btn layuiadmin-btn-list" lay-submit lay-filter="btn-search">
                         <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
                     </button>
-                    <div class="layui-upload" style="display:inline; padding-left:50px; ">
-
-
-
-                    </div>
                 </div>
             </div>
         </div>
@@ -74,6 +70,7 @@
             <div style="padding-bottom: 10px;">
                 <button class="layui-btn layuiadmin-btn-list" data-type="batchdel">删除</button>
                 <button class="layui-btn layuiadmin-btn-list" data-type="abc">新建</button>
+                <button class="layui-btn layuiadmin-btn-list" data-type="statistics">数据统计分析</button>
             </div>
             <table id="tbl-news-list" lay-filter="tbl-news-list"></table>
             <script type="text/html" id="toolbar-news-list">
@@ -98,6 +95,15 @@ layui.config({
         ,laydate = layui.laydate;
 
     //查询参数
+
+// <div class="layui-inline">
+//         <label class="layui-form-label">省份</label>
+//         <div class="layui-input-inline">
+//         <select id="IR_EPROVINCE" name="IR_EPROVINCE">
+//         <option value="">请选择</option>
+//         </select>
+//         </div>
+//         </div>
     var IR_ENAME = $.trim($("#IR_ENAME").val());
     var IR_EDUTY = $.trim($("#IR_EDUTY").val());
     var IR_EPROVINCE = $.trim($("#IR_EPROVINCE").val());
@@ -126,13 +132,16 @@ layui.config({
         ,where: queryParams
         ,cols: [[
             {type: 'checkbox', fixed: 'left'}
-            ,{field: 'iR_EID', width: 100, title: 'ID'}
+            ,{type: 'numbers',title: 'ID'}
+            ,{field: 'iR_EID', width: 100, title: 'IDs',hide:true}
             ,{field: 'iR_ENAME', width: 120, title: '专家姓名'}
             ,{field: 'iR_ESUBJECT', width: 120, title: '学科'}
-            ,{field: 'iR_EWORKUNIT', width: 150, title: '工作单位'}
-            ,{field: 'iR_EDUTY', width: 120, title: '职务'}
+            ,{field: 'iR_EWORKUNIT1', width: 150, title: '工作单位'}
+            ,{field: 'iR_EDUTY1', width: 120, title: '职务'}
+            ,{field: 'iR_EDUTY2', width: 120, title: '领域'}
+            ,{field: 'iR_EDUTY3', width: 120, title: '单位类别'}
             ,{field: 'iR_EPROVINCE', width: 120, title: '所在省', minWidth: 100}
-            ,{field: 'iR_EPHONE', width: 150, title: '手机号',sort: true}
+            ,{field: 'iR_EPHONE1', width: 150, title: '手机号',sort: true}
             ,{title: '操作', minWidth: 70, align: 'centeir', fixed: 'right', toolbar: '#toolbar-news-list'}
         ]]
         ,page: true
@@ -283,6 +292,22 @@ layui.config({
                 }
             });
             // layer.full(frame);
+        },
+        statistics: function(){
+            var data = null;
+            var frame = layer.open({
+                type: 2
+                ,title: '数据统计分析'
+                ,content:  "<%=path%>/statistics"
+                ,maxmin: true
+                ,area: ['480px', '500px']
+                ,btn: ['确定', '取消']
+                ,yes: function(index, layero){
+                    //layer.msg("保存成功");
+                    layer.close(frame);
+                }
+            });
+            layer.full(frame);
         }
     };
 

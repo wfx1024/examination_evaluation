@@ -14,15 +14,15 @@ spring:
   freemarker:
     enabled: false
   thymeleaf:
-    enabled: true
+    enabled: false
     check-template: false
     prefix: /view/plus/
   mvc:
     servlet:
       load-on-startup: 1
     view:
-      prefix: /view/plus/
-      suffix: .html
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
   devtools:
     restart:
       enabled: true

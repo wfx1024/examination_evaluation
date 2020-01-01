@@ -31,4 +31,6 @@ public interface TextbookService {
 
     int updateByDocId(Textbook textbook);
 
+    List<Map<String, Object>> statByType(String type);
+
 }
