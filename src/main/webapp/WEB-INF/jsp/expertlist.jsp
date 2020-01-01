@@ -300,7 +300,7 @@ layui.config({
                 ,area: ['480px', '500px']
                 ,btn: ['确定', '取消']
                 ,yes: function(index, layero){
-                    layer.msg("保存成功");
+                    //layer.msg("保存成功");
                     layer.close(frame);
                 }
             });
