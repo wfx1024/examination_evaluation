@@ -4,7 +4,7 @@
     <select id="newsList" resultType="com.eprobj.entity.BookOrgLocal" parameterType="com.eprobj.entity.BookOrgLocal">
         SELECT id,dwmc,callman,cel,email,region FROM  cbsxx
         WHERE
-        1 = 1
+        1 = 1 and callman is NOT NULL  and callman!=''
         <if test="dwmc!=null and dwmc!=''">
             and dwmc like concat('%',#{dwmc,jdbcType=VARCHAR},'%')
         </if>
@@ -53,7 +53,7 @@
     <select id="countAll" resultType="int" parameterType="com.eprobj.entity.BookOrgLocal">
         SELECT COUNT(*) FROM  cbsxx
         WHERE
-        1 = 1
+        1 = 1 and callman is NOT NULL  and callman!=''
         <if test="dwmc!=null and dwmc!=''">
             and dwmc like concat('%',#{dwmc,jdbcType=VARCHAR},'%')
         </if>

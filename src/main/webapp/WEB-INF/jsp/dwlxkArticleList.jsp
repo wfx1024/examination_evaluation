@@ -16,6 +16,9 @@
 </head>
 <style>
 .layui-btn-site{background-color:#B5B5B5}
+.layui-form-label{
+    width:90px;
+}
 </style>
 <body>
 
@@ -30,7 +33,7 @@
                     </div>
                 </div>
                 <div class="layui-inline">
-                    <label class="layui-form-label">联系人</label>
+                    <label class="layui-form-label">总编室联系人</label>
                     <div class="layui-input-inline">
                         <input type="text" id="callman" name="callman" placeholder="请输入" autocomplete="off" class="layui-input">
                     </div>
@@ -57,7 +60,9 @@
             <table id="tbl-news-list" lay-filter="tbl-news-list"></table>
             <script type="text/html" id="toolbar-news-list">
                 <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>编辑</a>
+                <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="editmess"><i class="layui-icon layui-icon-edit"></i>编辑短信</a>
                 <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>
+
             </script>
         </div>
     </div>
@@ -102,7 +107,7 @@ layui.config({
         ,cols: [[
             {type: 'checkbox', fixed: 'left'}
             ,{field: 'dwmc', width: 400, title: '单位名称'}
-            ,{field: 'callman', width: 200, title: '联系人', minWidth: 100}
+            ,{field: 'callman', width: 200, title: '总编室联系人', minWidth: 200}
             ,{field: 'cel', width: 200, title: '手机号',sort: true}
             ,{field: 'email', width: 200, title: '邮箱',sort: true}
             ,{field: 'region', width: 150, title: '地区'}
@@ -167,6 +172,20 @@ layui.config({
                 ,content:  '<%=path%>/dwlxk/adddw'
                 ,maxmin: true
                 ,area: ['500px', '350px']
+            });
+            /*layer.full(frame);*/
+        }else if(obj.event === 'editmess'){
+            var frame = layer.open({
+                type: 2
+                ,title: '编辑短信'
+                ,content:  '<%=path%>/dwlxk/senedmessage'
+                ,maxmin: true
+                ,area: ['500px', '350px']
+                ,btn: ['确定', '取消']
+                ,yes: function(index, layero){
+                    layer.msg("短信发送成功");
+                    layer.close(frame);
+                }
             });
             /*layer.full(frame);*/
         }

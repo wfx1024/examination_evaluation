@@ -22,24 +22,54 @@ public class DwLxkController {
     @Autowired
     private DwLxkService dwLxkService;
 
+
+    /**
+     * 跳转到国图出版联络单位
+     * @return
+     */
     @RequestMapping("/dwlxkart")
     public ModelAndView   dwlXk(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("dwlxkArticleList");
         return modelAndView;
     }
+
+    /**
+     * 编辑
+     * @return
+     */
     @RequestMapping("/editdw")
     public ModelAndView   edirDw(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("editdwlxk");
         return modelAndView;
     }
+    /**
+     * 编辑
+     * @return
+     */
+    @RequestMapping("/senedmessage")
+    public ModelAndView   sendMessage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("sendmessage");
+        return modelAndView;
+    }
+    /**
+     * 增加信息
+     * @return
+     */
     @RequestMapping("/adddw")
     public ModelAndView   addDw(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("adddwlxk");
         return modelAndView;
     }
+
+    /**
+     * ajax自动自动获取数据
+     * @param bookOrgLocal
+     * @return
+     */
     @ResponseBody
     @RequestMapping("/indexdatalist")
     public String indexData( BookOrgLocal bookOrgLocal){
