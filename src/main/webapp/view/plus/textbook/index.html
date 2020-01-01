@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <title>全国大中小教材数据库</title>
     <link rel="stylesheet" href="/kspj/static/layuiadmin/layui/css/layui.css">
+    <style>
+        .layui-form-label {
+            width:100px;
+        }
+    </style>
 </head>
 <body>
 
 <div class="layui-fluid">
     <div class="layui-card">
-        <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="form-search">
+        <div class="layui-form layui-card-header layuiadmin-card-header-auto" style="height: 196px;" lay-filter="form-search">
             <div class="layui-form-item">
                 <!--表格检索-->
                 <div class="layui-inline">
@@ -19,29 +24,100 @@
                     </div>
                 </div>
                 <div class="layui-inline">
-                    <label class="layui-form-label">书号</label>
+                    <label class="layui-form-label">书号（isbn）</label>
                     <div class="layui-input-inline">
                         <input type="text" id="isbn" name="isbn" placeholder="请输入" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-inline">
-                    <label class="layui-form-label">作者</label>
+                    <label class="layui-form-label">出版单位</label>
                     <div class="layui-input-inline">
-                        <input type="text" id="author" name="author" placeholder="请输入" autocomplete="off" class="layui-input">
+                        <input type="text" id="publisher" name="publisher" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">是否高校</label>
+                    <div class="layui-input-inline">
+                        <select id="isCollege" name="isCollege">
+                            <option value="">请选择</option>
+                            <option value="是">是</option>
+                            <option value="否">否</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">教材类型1-5</label>
+                    <div class="layui-input-inline">
+                        <select  name="textbookType1" id="textbookType1" lay-filter="textbookType1">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+                    <div class="layui-input-inline">
+                        <select  name="textbookType2" id="textbookType2">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+                    <div class="layui-input-inline">
+                        <select  name="textbookType3" id="textbookType3">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+                    <div class="layui-input-inline">
+                        <select  name="textbookType4" id="textbookType4">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+                    <div class="layui-input-inline">
+                        <select  name="textbookType5" id="textbookType5">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">版次日期</label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="editionDate" name="editionDate" placeholder="请选择" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">出版单位（精准）</label>
+                    <div class="layui-input-inline">
+                        <select id="publishUnit" name="publishUnit">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">主要作者1</label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="author1" name="author1" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">主要作者2</label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="author2" name="author2" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">状态</label>
+                    <div class="layui-input-inline">
+                        <select id="status" name="status">
+                            <option value="">请选择</option>
+                            <option value="">单位管理员已提交</option>
+                        </select>
                     </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label">语种</label>
                     <div class="layui-input-inline">
                         <select id="language" name="language">
-                            <option value="">请选择</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="layui-inline">
-                    <label class="layui-form-label">教材类型</label>
-                    <div class="layui-input-inline">
-                        <select id="textbookType" name="textbookType">
                             <option value="">请选择</option>
                         </select>
                     </div>
@@ -82,6 +158,14 @@ layui.config({
         ,form = layui.form
         ,table = layui.table
         ,laydate = layui.laydate;
+
+
+    //年月范围
+    laydate.render({
+        elem: '#editionDate'
+        ,type: 'month'
+        ,range: true
+    });
 
     var name = $.trim($("#name").val());
     var isbn = $.trim($("#isbn").val());
@@ -203,6 +287,21 @@ layui.config({
     };
 
 
+    form.on('select(textbookType1)',function (data) {
+        debugger
+        if (data.value === "基础教育教材") {
+            var select = $("#textbookType2");
+            var html = ""
+            html = html + "<option value=''>请选择</option>";
+            html = html + "<option value='国家课程教材'>国家课程教材</option>";
+            html= html + "<option value='地方课程教材（以省级审定目录为准）'>地方课程教材（以省级审定目录为准）</option>";
+            html= html + "<option value='少数民族语言教材'>少数民族语言教材</option>";
+            html= html + "<option value='其他'>其他</option>";
+            select.html(html);
+            form.render("select",'form-search');
+        }
+    })
+
     //监听工具条
     table.on('tool(tbl-book-list)', function(obj){
         var data = obj.data;
@@ -284,7 +383,7 @@ layui.config({
             data: params,
             success: function(d){
                 if(d.code=="0"){
-                    var select = $("#textbookType");
+                    var select = $("#textbookType1");
                     $.each(d.data, function (i, v) {
                         select.append("<option value='"+v+"'>"+v+"</option>");
                     });
