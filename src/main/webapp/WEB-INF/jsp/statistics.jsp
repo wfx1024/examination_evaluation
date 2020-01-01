@@ -176,7 +176,6 @@
                             for (var i = 0; i < data1.length; i++) {
                                 area.push(data1[i].name);
                             }
-                            alert(area)
                             drawLine(data1, area);
                         }
                     }
