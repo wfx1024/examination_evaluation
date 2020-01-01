@@ -68,37 +68,13 @@
         //查询参数
         var category = 0;
         var categoryName = '';
-        var queryParams = null;
+        var queryParams = {"leibie":"IR_ESUBJECT"};
         form.on('select(leibie)', function (data) {
             category = data.value;
             categoryName = data.elem[data.elem.selectedIndex].text;
             form.render('select');
             queryParams = {"leibie":category};
         });
-        //列表
-        table.render({
-            elem: '#tbl-news-list'
-            ,url: '<%=path%>/experts/parm'
-            ,where: queryParams
-            ,cols: [[
-                ,{field: 'name', width: 400, title: '分类名称'}
-                ,{field: 'value', width: 200, title: '数量',sort: true}
-            ]]
-            ,text: {
-                none: '未查询到匹配的记录' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
-            }
-            ,done: function (res, curr, count) {
-                var data1 = res.data;
-                var area=[];
-                if(data1.length>0){
-                    for (var i=0;i<data.length;i++){
-                        area.push(data1[i].name);
-                    }
-                    drawLine(data1,area);
-                }
-            }
-        });
-
         function drawLine(data1,area) {
             var dom = document.getElementById("container");
             var myChart = echarts.init(dom);
@@ -141,6 +117,31 @@
                 myChart.setOption(option, true);
             }
         }
+        //列表
+        table.render({
+            elem: '#tbl-news-list'
+            ,url: '<%=path%>/experts/parm'
+            ,where: queryParams
+            ,cols: [[
+                ,{field: 'name', width: 400, title: '分类名称'}
+                ,{field: 'value', width: 200, title: '数量',sort: true}
+            ]]
+            ,text: {
+                none: '未查询到匹配的记录' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+            }
+            ,done: function (res, curr, count) {
+                var data1 = res.data;
+                var area=[];
+                if(data1.length>0){
+                    for (var i=0;i<data1.length;i++){
+                        area.push(data1[i].name);
+                    }
+                    drawLine(data1,area);
+                }
+            }
+        });
+
+
 
 
             // 按钮自动隐藏，监听事件失效处理
@@ -172,9 +173,10 @@
                         var data1 = res.data;
                         var area = [];
                         if (data1.length > 0) {
-                            for (var i = 0; i < data.length; i++) {
-                                area.push(data[i].name);
+                            for (var i = 0; i < data1.length; i++) {
+                                area.push(data1[i].name);
                             }
+                            alert(area)
                             drawLine(data1, area);
                         }
                     }
