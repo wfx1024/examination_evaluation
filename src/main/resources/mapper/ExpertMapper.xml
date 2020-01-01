@@ -91,13 +91,19 @@
     </select>
 
 
-<!--    搜索时间的-->
-<!--    <select id="expertsGYears" resultType="String" >-->
-<!--      select year(IR_URLTIME) years from urlcontent GROUP BY years ORDER BY years DESC-->
-<!--    </select>-->
 
-<!--    <select id="newsAnalyse" resultType="map" >-->
-<!--      select IR_GROUPNAME,count(*) num,year(IR_URLTIME) years from urlcontent WHERE year(IR_URLTIME)= #{param.year} GROUP BY IR_GROUPNAME,years ORDER BY num DESC-->
-<!--    </select>-->
+
+    <select id="expertSubject" resultType="map" >
+        select IR_ESUBJECT name ,count(*) value from urlexpert  GROUP BY IR_ESUBJECT
+    </select>
+
+
+    <select id="expertSubject1" resultType="map" >
+        select IR_EPROVINCE name ,count(*) value from urlexpert  GROUP BY IR_EPROVINCE
+    </select>
+
+
+
+
 
 </mapper>

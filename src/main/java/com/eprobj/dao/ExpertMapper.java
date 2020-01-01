@@ -15,19 +15,16 @@ import java.util.Map;
 @Repository
 public interface ExpertMapper {
 
-
-
     List<Expert> expertsList(Expert expert);
-
-
     int expertCount(Expert expert);
-
-
 
     List<String> areaList();
     int deleteExpert(@Param("expertIDs")List expertIDs);
+    List<Map> expertSubject();
 
-    List<String> expertsGYears();
-    List<Map> expertsAnalyse(@Param("param") Map param);
+    List<Map> expertSubject1();
+
+
+
 
 }

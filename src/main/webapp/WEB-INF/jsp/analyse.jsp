@@ -61,7 +61,6 @@ layui.config({
         ,form = layui.form
         ,table = layui.table
         ,laydate = layui.laydate;
-
     //查询参数
     var year = ${years[0]};
     var queryParams = {

@@ -2,6 +2,7 @@ package com.eprobj.service;
 
 import com.eprobj.entity.Expert;
 import com.eprobj.entity.NEWS;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -13,6 +14,7 @@ public interface IExpertService {
     List areaList();
     int deleteExpert(List expertIDs);
 
-//    List<String> expertsGYears();
-//    List<Map> expertsAnalyse(Map param);
+    List<Map> expertSubject();
+    List<Map> expertSubject1();
+
 }

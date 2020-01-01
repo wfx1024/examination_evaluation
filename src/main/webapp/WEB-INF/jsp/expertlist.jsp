@@ -44,6 +44,7 @@
                     </div>
                 </div>
 
+
                 <div class="layui-inline">
                     <label class="layui-form-label">学科</label>
                     <div class="layui-input-inline">
@@ -61,11 +62,6 @@
                     <button class="layui-btn layuiadmin-btn-list" lay-submit lay-filter="btn-search">
                         <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
                     </button>
-                    <div class="layui-upload" style="display:inline; padding-left:50px; ">
-
-
-
-                    </div>
                 </div>
             </div>
         </div>
@@ -74,6 +70,7 @@
             <div style="padding-bottom: 10px;">
                 <button class="layui-btn layuiadmin-btn-list" data-type="batchdel">删除</button>
                 <button class="layui-btn layuiadmin-btn-list" data-type="abc">新建</button>
+                <button class="layui-btn layuiadmin-btn-list" data-type="statistics">数据统计分析</button>
             </div>
             <table id="tbl-news-list" lay-filter="tbl-news-list"></table>
             <script type="text/html" id="toolbar-news-list">
@@ -98,6 +95,15 @@ layui.config({
         ,laydate = layui.laydate;
 
     //查询参数
+
+// <div class="layui-inline">
+//         <label class="layui-form-label">省份</label>
+//         <div class="layui-input-inline">
+//         <select id="IR_EPROVINCE" name="IR_EPROVINCE">
+//         <option value="">请选择</option>
+//         </select>
+//         </div>
+//         </div>
     var IR_ENAME = $.trim($("#IR_ENAME").val());
     var IR_EDUTY = $.trim($("#IR_EDUTY").val());
     var IR_EPROVINCE = $.trim($("#IR_EPROVINCE").val());
@@ -283,6 +289,22 @@ layui.config({
                 }
             });
             // layer.full(frame);
+        },
+        statistics: function(){
+            var data = null;
+            var frame = layer.open({
+                type: 2
+                ,title: '数据统计分析'
+                ,content:  "<%=path%>/statistics"
+                ,maxmin: true
+                ,area: ['480px', '500px']
+                ,btn: ['确定', '取消']
+                ,yes: function(index, layero){
+                    layer.msg("保存成功");
+                    layer.close(frame);
+                }
+            });
+            layer.full(frame);
         }
     };
 
