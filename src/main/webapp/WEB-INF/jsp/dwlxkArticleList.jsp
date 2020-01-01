@@ -60,7 +60,7 @@
             <table id="tbl-news-list" lay-filter="tbl-news-list"></table>
             <script type="text/html" id="toolbar-news-list">
                 <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>编辑</a>
-                <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="editmess"><i class="layui-icon layui-icon-edit"></i>编辑短信</a>
+                <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="editmess"><i class="layui-icon layui-icon-edit"></i>发送消息</a>
                 <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>
 
             </script>
@@ -177,7 +177,7 @@ layui.config({
         }else if(obj.event === 'editmess'){
             var frame = layer.open({
                 type: 2
-                ,title: '编辑短信'
+                ,title: '发送消息'
                 ,content:  '<%=path%>/dwlxk/senedmessage'
                 ,maxmin: true
                 ,area: ['500px', '350px']

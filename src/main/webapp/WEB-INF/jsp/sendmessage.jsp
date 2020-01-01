@@ -18,29 +18,39 @@ To change this template use File | Settings | File Templates.
     <title>编辑页</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <link rel="stylesheet" href="<%=path%>/static/layui/css/layui.css">
-    <script type="text/javascript" charset="utf-8" src="<%=path%>/static/ueditor/ueditor.config.js"></script>
-    <script type="text/javascript" charset="utf-8" src="<%=path%>/static/ueditor/ueditor.all.min.js"> </script>
-    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
-    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
-    <script type="text/javascript" charset="utf-8" src="<%=path%>/static/ueditor/lang/zh-cn/zh-cn.js"></script>
-    <style type="text/css">
-        div{
-            width:100%;
-        }
-        .layui-textarea{
-            width:280px;
-            height:215px;
-        }
-    </style>
 </head>
 <body>
-<div style="width:1024px;height:50px; margin: 0 auto;">
-    <div class="layui-form-item layui-form-text">
-        <div class="layui-input-block">
-            <textarea name="desc" placeholder="输入要发送的短信内容" class="layui-textarea"></textarea>
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="form-search">
+            <div class="layui-form-item">
+                <label class="layui-form-label">通知方式</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" checked name="like[write]" title="短信">
+                    <input type="checkbox" checked name="like[write]" title="邮件">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-form-text">
+                    <textarea name="desc" placeholder="输入要发送的短信内容" class="layui-textarea"></textarea>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
 </body>
+<script src="<%=path%>/static/layuiadmin/layui/layui.js" charset="utf-8"></script>
+<script>
+    layui.config({
+        base: '<%=path%>/static/layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use(['layer', 'index', 'form', 'table', 'laydate'], function() {
+            var $ = layui.$  //JQuery
+                , layer = layui.layer
+                , form = layui.form
+                , table = layui.table
+                , laydate = layui.laydate;
+        });
+</script>
 </html>
