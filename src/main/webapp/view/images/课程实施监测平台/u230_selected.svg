@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="12px" viewBox="526 487  12 12" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 532 487  C 535.36 487  538 489.64  538 493  C 538 496.36  535.36 499  532 499  C 528.64 499  526 496.36  526 493  C 526 489.64  528.64 487  532 487  Z " fill-rule="nonzero" fill="#ffffff" stroke="none" />
-  <path d="M 532 487.5  C 535.08 487.5  537.5 489.92  537.5 493  C 537.5 496.08  535.08 498.5  532 498.5  C 528.92 498.5  526.5 496.08  526.5 493  C 526.5 489.92  528.92 487.5  532 487.5  Z " stroke-width="1" stroke="#797979" fill="none" />
-  <path d="M 532 496  C 530.32 496  529 494.68  529 493  C 529 491.32  530.32 490  532 490  C 533.68 490  535 491.32  535 493  C 535 494.68  533.68 496  532 496  " fill-rule="nonzero" fill="#797979" stroke="none" />
+<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="12px" viewBox="26 487  12 12" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 32 487  C 35.36 487  38 489.64  38 493  C 38 496.36  35.36 499  32 499  C 28.64 499  26 496.36  26 493  C 26 489.64  28.64 487  32 487  Z " fill-rule="nonzero" fill="#ffffff" stroke="none" />
+  <path d="M 32 487.5  C 35.08 487.5  37.5 489.92  37.5 493  C 37.5 496.08  35.08 498.5  32 498.5  C 28.92 498.5  26.5 496.08  26.5 493  C 26.5 489.92  28.92 487.5  32 487.5  Z " stroke-width="1" stroke="#797979" fill="none" />
+  <path d="M 32 496  C 30.32 496  29 494.68  29 493  C 29 491.32  30.32 490  32 490  C 33.68 490  35 491.32  35 493  C 35 494.68  33.68 496  32 496  " fill-rule="nonzero" fill="#797979" stroke="none" />
 </svg>
